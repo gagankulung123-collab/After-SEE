@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — Institutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Shared design system -->
+  <link rel="stylesheet" href="../shared/shared.css">
+  <!-- step3-institutions page styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="en">🇳🇵 Free guidance for SEE graduates across all 7 provinces — No login required</span>
+  <span class="ne">🇳🇵 नेपालका सबै ७ प्रदेशका SEE उत्तीर्णहरूको लागि निःशुल्क मार्गदर्शन</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="../step1-home/index.html" class="logo">
+      <div class="logo-mark">📚</div>
+      <div class="logo-name">Pathshala <em>Guide</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="../step1-home/index.html"><span class="en">Home</span><span class="ne">गृहपृष्ठ</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">Pathways</span><span class="ne">मार्गहरू</span></a>
+      <a href="../step3-institutions/index.html" class="active"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="bEN" class="active" onclick="setLang('en')">EN</button>
+        <button id="bNE" onclick="setLang('ne')">नेपाली</button>
+      </div>
+      <button class="btn-cta en" onclick="alert('PDF download coming soon!')">Download Guide</button>
+      <button class="btn-cta ne" onclick="alert('PDF download coming soon!')">गाइड डाउनलोड</button>
+      <button class="hamburger" onclick="openNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-overlay" id="mobOv" onclick="closeNav(event)">
+  <div class="mob-drawer">
+    <button class="xbtn" onclick="closeNav()">✕</button>
+    <a href="../step1-home/index.html"><span class="en">🏠 Home</span><span class="ne">🏠 गृहपृष्ठ</span></a>
+    <a href="../step2-pathways/index.html"><span class="en">🗺 Pathways</span><span class="ne">🗺 मार्गहरू</span></a>
+    <a href="../step3-institutions/index.html"><span class="en">🏫 Institutions</span><span class="ne">🏫 संस्थाहरू</span></a>
+    <a href="../step4-scholarships/index.html"><span class="en">💰 Scholarships</span><span class="ne">💰 छात्रवृत्ति</span></a>
+    <a href="../step5-gpa-tool/index.html"><span class="en">🎯 GPA Tool</span><span class="ne">🎯 GPA टूल</span></a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-stripe"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb">
+      <a href="../step1-home/index.html" class="en">Home</a>
+      <a href="../step1-home/index.html" class="ne">गृहपृष्ठ</a>
+      <span class="sep">›</span>
+      <span style="color:rgba(255,255,255,.55)" class="en">Institutions</span>
+      <span style="color:rgba(255,255,255,.55)" class="ne">संस्थाहरू</span>
+    </div>
+    <div class="sec-kicker reveal">
+      <span class="en">Verified Colleges — All 7 Provinces</span>
+      <span class="ne">प्रमाणित कलेजहरू — सबै ७ प्रदेश</span>
+    </div>
+    <h1 class="reveal d1">
+      <span class="en">Find the Right College<span class="accent">Near You.</span></span>
+      <span class="ne">सही कलेज खोज्नुहोस्<span class="accent">आफ्नो नजिक।</span></span>
+    </h1>
+    <p class="sub reveal d2 en">Browse NEB and CTEVT-affiliated institutions across Nepal. Filter by province, pathway, or type to find your best fit.</p>
+    <p class="sub reveal d2 ne">नेपालभर NEB र CTEVT सम्बद्ध संस्थाहरू हेर्नुहोस्। प्रदेश, मार्ग वा प्रकारले फिल्टर गर्नुहोस्।</p>
+    <div class="hero-stats reveal d3">
+      <div class="hs-item"><span class="hs-num">50<em>+</em></span><span class="hs-lbl en">Institutions</span><span class="hs-lbl ne">संस्थाहरू</span></div>
+      <div class="hs-item"><span class="hs-num">7</span><span class="hs-lbl en">Provinces</span><span class="hs-lbl ne">प्रदेशहरू</span></div>
+      <div class="hs-item"><span class="hs-num">4</span><span class="hs-lbl en">Pathways</span><span class="hs-lbl ne">मार्गहरू</span></div>
+      <div class="hs-item"><span class="hs-num" style="color:var(--gold)">✅</span><span class="hs-lbl">NEB + CTEVT</span></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sb-title"><span class="en">Filters</span><span class="ne">फिल्टर</span></div>
+
+    <div class="search-box">
+      <span class="ico">🔍</span>
+      <input type="text" id="searchInp" placeholder="Search institutions..." oninput="applyFilters()">
+    </div>
+
+    <div class="fg">
+      <div class="fg-label en">Province</div>
+      <div class="fg-label ne">प्रदेश</div>
+      <div class="chips" id="provChips">
+        <button class="chip active" data-v="all" onclick="setF('prov','all',this)">🇳🇵 <span class="en">All Provinces</span><span class="ne">सबै प्रदेश</span><span class="cnt" id="ca">—</span></button>
+        <button class="chip" data-v="bagmati"       onclick="setF('prov','bagmati',this)"><span class="dot" style="background:#c0272d"></span>Bagmati<span class="cnt" id="cb">—</span></button>
+        <button class="chip" data-v="gandaki"       onclick="setF('prov','gandaki',this)"><span class="dot" style="background:#0ea5e9"></span>Gandaki<span class="cnt" id="cg">—</span></button>
+        <button class="chip" data-v="lumbini"       onclick="setF('prov','lumbini',this)"><span class="dot" style="background:#16a34a"></span>Lumbini<span class="cnt" id="cl">—</span></button>
+        <button class="chip" data-v="p1"            onclick="setF('prov','p1',this)"><span class="dot" style="background:#f59e0b"></span>Province No.1<span class="cnt" id="cp1">—</span></button>
+        <button class="chip" data-v="madhesh"       onclick="setF('prov','madhesh',this)"><span class="dot" style="background:#a855f7"></span>Madhesh<span class="cnt" id="cm">—</span></button>
+        <button class="chip" data-v="karnali"       onclick="setF('prov','karnali',this)"><span class="dot" style="background:#ec4899"></span>Karnali<span class="cnt" id="ck">—</span></button>
+        <button class="chip" data-v="sudurpashchim" onclick="setF('prov','sudurpashchim',this)"><span class="dot" style="background:#0d9488"></span>Sudurpashchim<span class="cnt" id="cs">—</span></button>
+      </div>
+    </div>
+
+    <div class="fg">
+      <div class="fg-label en">Pathway</div>
+      <div class="fg-label ne">मार्ग</div>
+      <div class="chips" id="pathChips">
+        <button class="chip active" data-v="all"     onclick="setF('path','all',this)">📚 <span class="en">All</span><span class="ne">सबै</span></button>
+        <button class="chip" data-v="science"        onclick="setF('path','science',this)"><span class="dot" style="background:#4ade80"></span>🔬 Science</button>
+        <button class="chip" data-v="mgmt"           onclick="setF('path','mgmt',this)"><span class="dot" style="background:#38bdf8"></span>📊 Management</button>
+        <button class="chip" data-v="law"            onclick="setF('path','law',this)"><span class="dot" style="background:#a78bfa"></span>⚖️ Law &amp; Humanities</button>
+        <button class="chip" data-v="ctevt"          onclick="setF('path','ctevt',this)"><span class="dot" style="background:#fbbf24"></span>🔧 CTEVT</button>
+      </div>
+    </div>
+
+    <div class="fg">
+      <div class="fg-label en">Affiliation</div>
+      <div class="fg-label ne">सम्बद्धता</div>
+      <div class="chips" id="affChips">
+        <button class="chip active" data-v="all"  onclick="setF('aff','all',this)">🏛️ <span class="en">All</span><span class="ne">सबै</span></button>
+        <button class="chip" data-v="neb"         onclick="setF('aff','neb',this)"><span class="dot" style="background:#c0272d"></span>NEB Affiliated</button>
+        <button class="chip" data-v="ctevt"       onclick="setF('aff','ctevt',this)"><span class="dot" style="background:#e8a020"></span>CTEVT Affiliated</button>
+        <button class="chip" data-v="tu"          onclick="setF('aff','tu',this)"><span class="dot" style="background:#0ea5e9"></span>TU Affiliated</button>
+      </div>
+    </div>
+
+    <button class="clear-btn" onclick="clearFilters()">
+      <span class="en">✕ Clear all filters</span><span class="ne">✕ फिल्टर हटाउनुहोस्</span>
+    </button>
+  </aside>
+
+  <!-- CONTENT -->
+  <div>
+    <button class="mob-filter-btn" onclick="openFD()">
+      🎛️ <span class="en">Filter Institutions</span><span class="ne">संस्था फिल्टर</span>
+    </button>
+
+    <div class="toolbar">
+      <div class="res-count">
+        <span class="en">Showing <strong id="cntEN">—</strong> institutions</span>
+        <span class="ne"><strong id="cntNE">—</strong> संस्थाहरू</span>
+      </div>
+      <div class="view-toggle">
+        <button class="vt active" id="gBtn" onclick="setView('grid')" title="Grid">⊞</button>
+        <button class="vt" id="lBtn" onclick="setView('list')" title="List">☰</button>
+      </div>
+    </div>
+
+    <div class="inst-grid" id="grid"></div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg" onclick="closeModal(event)">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<!-- MOBILE FILTER DRAWER -->
+<div class="fd-overlay" id="fdOv" onclick="closeFD(event)">
+  <div class="fd-panel">
+    <div class="fd-hd">
+      <h3 class="en">Filter Institutions</h3><h3 class="ne">फिल्टर</h3>
+      <button class="fd-x" onclick="closeFD()">✕</button>
+    </div>
+    <div class="fg">
+      <div class="fg-label en">Province</div><div class="fg-label ne">प्रदेश</div>
+      <div class="chips" id="provChipsMob">
+        <button class="chip active" data-v="all"            onclick="setF('prov','all',this,1)">🇳🇵 <span class="en">All</span><span class="ne">सबै</span></button>
+        <button class="chip" data-v="bagmati"               onclick="setF('prov','bagmati',this,1)"><span class="dot" style="background:#c0272d"></span>Bagmati</button>
+        <button class="chip" data-v="gandaki"               onclick="setF('prov','gandaki',this,1)"><span class="dot" style="background:#0ea5e9"></span>Gandaki</button>
+        <button class="chip" data-v="lumbini"               onclick="setF('prov','lumbini',this,1)"><span class="dot" style="background:#16a34a"></span>Lumbini</button>
+        <button class="chip" data-v="p1"                    onclick="setF('prov','p1',this,1)"><span class="dot" style="background:#f59e0b"></span>Province No.1</button>
+        <button class="chip" data-v="madhesh"               onclick="setF('prov','madhesh',this,1)"><span class="dot" style="background:#a855f7"></span>Madhesh</button>
+        <button class="chip" data-v="karnali"               onclick="setF('prov','karnali',this,1)"><span class="dot" style="background:#ec4899"></span>Karnali</button>
+        <button class="chip" data-v="sudurpashchim"         onclick="setF('prov','sudurpashchim',this,1)"><span class="dot" style="background:#0d9488"></span>Sudurpashchim</button>
+      </div>
+    </div>
+    <div class="fg" style="margin-top:18px">
+      <div class="fg-label en">Pathway</div><div class="fg-label ne">मार्ग</div>
+      <div class="chips" id="pathChipsMob">
+        <button class="chip active" data-v="all"   onclick="setF('path','all',this,1)">📚 All</button>
+        <button class="chip" data-v="science"      onclick="setF('path','science',this,1)"><span class="dot" style="background:#4ade80"></span>🔬 Science</button>
+        <button class="chip" data-v="mgmt"         onclick="setF('path','mgmt',this,1)"><span class="dot" style="background:#38bdf8"></span>📊 Management</button>
+        <button class="chip" data-v="law"          onclick="setF('path','law',this,1)"><span class="dot" style="background:#a78bfa"></span>⚖️ Law</button>
+        <button class="chip" data-v="ctevt"        onclick="setF('path','ctevt',this,1)"><span class="dot" style="background:#fbbf24"></span>🔧 CTEVT</button>
+      </div>
+    </div>
+    <button class="clear-btn" style="margin-top:20px" onclick="clearFilters();closeFD()">✕ <span class="en">Clear filters</span><span class="ne">फिल्टर हटाउनुहोस्</span></button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div class="f-about">
+      <a href="../step1-home/index.html" class="logo">
+        <div class="logo-mark">📚</div>
+        <div class="logo-name">Pathshala <em>Guide</em></div>
+      </a>
+      <p class="en">Free, bilingual career guidance for SEE graduates across Nepal. Bridging the information gap for government school students.</p>
+      <p class="ne">नेपालका SEE उत्तीर्णहरूको लागि निःशुल्क, द्विभाषिक क्यारियर मार्गदर्शन।</p>
+      <div class="f-badge">🇳🇵 NEB &amp; CTEVT Verified</div>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Pathways</h5><h5 class="ne">मार्गहरू</h5>
+      <a href="../step2-pathways/index.html"><span class="en">🔬 Science</span><span class="ne">🔬 विज्ञान</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">📊 Management</span><span class="ne">📊 व्यवस्थापन</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">⚖️ Law & Humanities</span><span class="ne">⚖️ कानून</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">🔧 CTEVT</span><span class="ne">🔧 CTEVT</span></a>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Resources</h5><h5 class="ne">स्रोतहरू</h5>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="#"><span class="en">Download Guides</span><span class="ne">गाइड डाउनलोड</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">Career Roadmap</span><span class="ne">क्यारियर नक्सा</span></a>
+    </div>
+    <div class="f-col">
+      <h5>Official Sources</h5>
+      <a href="https://neb.ntc.net.np" target="_blank">✅ NEB Nepal</a>
+      <a href="https://www.ctevt.org.np" target="_blank">✅ CTEVT</a>
+      <a href="#"><span class="en">Municipality Portals</span><span class="ne">नगरपालिका</span></a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span class="en">© 2025 Pathshala Guide · Free for all students 🇳🇵</span>
+    <span class="ne">© २०२५ Pathshala Guide · सबैको लागि निःशुल्क 🇳🇵</span>
+    <span style="color:rgba(255,255,255,.2)">Verified from NEB & CTEVT official sources</span>
+  </div>
+</footer>
+  <!-- Shared JS -->
+  <script src="../shared/shared.js"></script>
+  <!-- Page JS -->
+  <script src="script.js"></script>
+</body>
+</html>

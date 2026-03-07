@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — Scholarships</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Shared design system -->
+  <link rel="stylesheet" href="../shared/shared.css">
+  <!-- step4-scholarships page styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="en">💰 Multiple scholarships available for SEE graduates — Apply before deadlines!</span>
+  <span class="ne">💰 SEE उत्तीर्णहरूका लागि धेरै छात्रवृत्तिहरू उपलब्ध — समयसीमा अघि आवेदन दिनुहोस्!</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="../step1-home/index.html" class="logo">
+      <div class="logo-mark">📚</div>
+      <div class="logo-name">Pathshala <em>Guide</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="../step1-home/index.html"><span class="en">Home</span><span class="ne">गृहपृष्ठ</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">Pathways</span><span class="ne">मार्गहरू</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html" class="active"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="bEN" class="active" onclick="setLang('en')">EN</button>
+        <button id="bNE" onclick="setLang('ne')">नेपाली</button>
+      </div>
+      <button class="btn-cta en">Download Guide</button>
+      <button class="btn-cta ne">गाइड डाउनलोड</button>
+      <button class="hamburger" onclick="openNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-ov" id="mobOv" onclick="closeNav(event)">
+  <div class="mob-drawer">
+    <button class="xbtn" onclick="closeNav()">✕</button>
+    <a href="../step1-home/index.html"><span class="en">🏠 Home</span><span class="ne">🏠 गृहपृष्ठ</span></a>
+    <a href="../step2-pathways/index.html"><span class="en">🗺 Pathways</span><span class="ne">🗺 मार्गहरू</span></a>
+    <a href="../step3-institutions/index.html"><span class="en">🏫 Institutions</span><span class="ne">🏫 संस्थाहरू</span></a>
+    <a href="../step4-scholarships/index.html"><span class="en">💰 Scholarships</span><span class="ne">💰 छात्रवृत्ति</span></a>
+    <a href="../step5-gpa-tool/index.html"><span class="en">🎯 GPA Tool</span><span class="ne">🎯 GPA टूल</span></a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-stripe"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb">
+      <a href="../step1-home/index.html" class="en">Home</a>
+      <a href="../step1-home/index.html" class="ne">गृहपृष्ठ</a>
+      <span class="sep">›</span>
+      <span style="color:rgba(255,255,255,.55)" class="en">Scholarships</span>
+      <span style="color:rgba(255,255,255,.55)" class="ne">छात्रवृत्ति</span>
+    </div>
+    <div class="sec-kicker reveal">
+      <span class="en">Financial Aid — Verified Sources</span>
+      <span class="ne">आर्थिक सहायता — प्रमाणित स्रोत</span>
+    </div>
+    <h1 class="reveal d1">
+      <span class="en">Don't Let Money Stop<span class="accent">Your Dreams.</span></span>
+      <span class="ne">पैसाले तपाईंको सपना<span class="accent">रोक्न नदिनुहोस्।</span></span>
+    </h1>
+    <p class="sub reveal d2 en">Every SEE graduate in Nepal has access to financial aid — government quotas, CTEVT reserved seats, NGO support and more. Here's everything in one place.</p>
+    <p class="sub reveal d2 ne">नेपालका प्रत्येक SEE उत्तीर्णले आर्थिक सहायता पाउन सक्छन् — सरकारी कोटा, CTEVT आरक्षित सिट, NGO सहायता र थप। यहाँ सबै एकै ठाउँमा।</p>
+    <div class="hero-stats reveal d3">
+      <div class="hs-item"><span class="hs-num">10<em>+</em></span><span class="hs-lbl en">Scholarship Types</span><span class="hs-lbl ne">छात्रवृत्ति प्रकार</span></div>
+      <div class="hs-item"><span class="hs-num" style="color:var(--gold)">Free</span><span class="hs-lbl en">All Applications</span><span class="hs-lbl ne">सबै आवेदन</span></div>
+      <div class="hs-item"><span class="hs-num">7</span><span class="hs-lbl en">Provinces Covered</span><span class="hs-lbl ne">प्रदेशहरू</span></div>
+      <div class="hs-item"><span class="hs-num">✅</span><span class="hs-lbl">NEB + CTEVT Verified</span></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="fb-inner">
+    <span class="fb-label en">Filter:</span>
+    <span class="fb-label ne">फिल्टर:</span>
+    <button class="ftab active" data-f="all" onclick="filterCards('all',this)"><span class="en">All Scholarships</span><span class="ne">सबै</span></button>
+    <button class="ftab" data-f="govt" onclick="filterCards('govt',this)">🏛️ <span class="en">Government</span><span class="ne">सरकारी</span></button>
+    <button class="ftab" data-f="ctevt" onclick="filterCards('ctevt',this)">🔧 CTEVT</button>
+    <button class="ftab" data-f="ngo" onclick="filterCards('ngo',this)">🤝 <span class="en">NGO / Aid</span><span class="ne">NGO</span></button>
+    <button class="ftab" data-f="merit" onclick="filterCards('merit',this)">⭐ <span class="en">Merit-Based</span><span class="ne">मेरिट</span></button>
+    <button class="ftab" data-f="dalit" onclick="filterCards('dalit',this)">🫂 <span class="en">Reserved Seats</span><span class="ne">आरक्षित</span></button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ALERT BANNER -->
+  <div class="alert-banner reveal">
+    <div class="alert-ico">⚠️</div>
+    <div class="alert-text">
+      <h4 class="en">Apply Early — Deadlines Are Real</h4>
+      <h4 class="ne">छिटो आवेदन दिनुहोस् — समयसीमा वास्तविक छ</h4>
+      <p class="en">Most government scholarships close within 2–3 months of SEE results. Keep your marksheet, citizenship certificate, and school leaving certificate ready.</p>
+      <p class="ne">अधिकांश सरकारी छात्रवृत्ति SEE नतिजाको २–३ महिनाभित्र बन्द हुन्छन्। आफ्नो अंकपत्र, नागरिकता र विद्यालय छोड्ने प्रमाणपत्र तयार राख्नुहोस्।</p>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 1: GOVERNMENT ══ -->
+  <div class="sc-section reveal" id="sec-govt">
+    <div class="sc-section-hd">
+      <div class="sc-type-icon" style="background:rgba(192,39,45,.1);border-color:rgba(192,39,45,.25)">🏛️</div>
+      <div class="sc-section-meta">
+        <h2 class="en">Government Scholarships</h2>
+        <h2 class="ne">सरकारी छात्रवृत्तिहरू</h2>
+        <p class="en">Funded by federal and provincial governments. Apply through your municipality or school after SEE results.</p>
+        <p class="ne">संघीय र प्रदेश सरकारद्वारा वित्तपोषित। SEE नतिजापछि नगरपालिका वा विद्यालय मार्फत आवेदन दिनुहोस्।</p>
+        <div class="sc-count-badge" style="background:rgba(192,39,45,.1);border:1px solid rgba(192,39,45,.2);color:#f87171;font-family:var(--ff-m);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-top:10px">4 <span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></div>
+      </div>
+    </div>
+    <div class="sc-grid" id="grid-govt">
+
+      <div class="sc-card reveal" data-type="govt">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--crimson),#8b1a1f);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">10% Municipal Quota Scholarship</div>
+          <div class="sc-card-name ne">१०% नगरपालिका कोटा छात्रवृत्ति</div>
+          <div class="sc-card-amt" style="background:rgba(192,39,45,.12);color:#f87171">Full Fee Waiver</div>
+        </div>
+        <p class="sc-card-desc en">Mandated by Nepal's education law — 10% of all seats in private +2 colleges must be offered free to government school students. One of the most accessible scholarships for SEE graduates.</p>
+        <p class="sc-card-desc ne">नेपालको शिक्षा कानूनले निजी +2 कलेजका १०% सिट सरकारी विद्यालयका विद्यार्थीलाई निःशुल्क दिनु अनिवार्य छ।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">📍</span><span class="en">All 7 Provinces</span><span class="ne">सबै ७ प्रदेश</span></div>
+          <div class="meta-pill"><span class="mp-ico">🎓</span><span class="en">+2 Science & Management</span><span class="ne">+2 विज्ञान र व्यवस्थापन</span></div>
+          <div class="meta-pill"><span class="mp-ico">🏫</span><span class="en">Community School Students</span><span class="ne">सामुदायिक विद्यालय</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Studied in a government/community school</div>
+            <div class="elig-item ne">सरकारी/सामुदायिक विद्यालयमा पढेको</div>
+            <div class="elig-item en">Passed SEE (any GPA)</div>
+            <div class="elig-item ne">SEE उत्तीर्ण (जुनसुकै GPA)</div>
+            <div class="elig-item en">Apply within 3 months of SEE result</div>
+            <div class="elig-item ne">SEE नतिजाको ३ महिनाभित्र आवेदन</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip urgent">⏰ <span class="en">Deadline: 3 months post-SEE</span><span class="ne">समयसीमा: SEE पछि ३ महिना</span></div>
+          <button class="apply-btn en" onclick="showSteps('municipal')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('municipal')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d1" data-type="govt">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#c47810);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Prime Minister's Scholarship (PM Scholarship)</div>
+          <div class="sc-card-name ne">प्रधानमन्त्री छात्रवृत्ति</div>
+          <div class="sc-card-amt" style="background:rgba(232,160,32,.12);color:var(--gold-l)">Full Tuition</div>
+        </div>
+        <p class="sc-card-desc en">Federal government scholarship for meritorious students from economically disadvantaged backgrounds. Covers full tuition for +2 and bachelor's level in selected public colleges.</p>
+        <p class="sc-card-desc ne">आर्थिक रूपमा कमजोर मेधावी विद्यार्थीका लागि संघीय सरकारी छात्रवृत्ति। चयनित सार्वजनिक कलेजमा +2 र स्नातक तहको पूर्ण शुल्क।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">📍</span><span class="en">All Provinces</span><span class="ne">सबै प्रदेश</span></div>
+          <div class="meta-pill"><span class="mp-ico">📊</span><span class="en">Merit + Income Based</span><span class="ne">मेरिट + आय</span></div>
+          <div class="meta-pill"><span class="mp-ico">🏛️</span><span class="en">Public Colleges Only</span><span class="ne">सार्वजनिक कलेज मात्र</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">GPA 3.0+ in SEE preferred</div>
+            <div class="elig-item ne">SEE मा GPA ३.०+ प्राथमिकता</div>
+            <div class="elig-item en">Annual family income below NPR 4 Lakh</div>
+            <div class="elig-item ne">वार्षिक पारिवारिक आय NPR ४ लाखभन्दा कम</div>
+            <div class="elig-item en">Nepali citizen</div>
+            <div class="elig-item ne">नेपाली नागरिक</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip normal">📅 <span class="en">Annually — check Ministry site</span><span class="ne">वार्षिक — मन्त्रालय साइट हेर्नुहोस्</span></div>
+          <button class="apply-btn en" onclick="showSteps('pm')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('pm')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d2" data-type="govt">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),#0a7a72);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Province Government Scholarship</div>
+          <div class="sc-card-name ne">प्रदेश सरकार छात्रवृत्ति</div>
+          <div class="sc-card-amt" style="background:rgba(13,148,136,.1);color:#2dd4bf">Partial / Full</div>
+        </div>
+        <p class="sc-card-desc en">Each of Nepal's 7 provinces offers separate scholarship programs. Karnali and Sudurpashchim provinces have especially generous support for local students attending nearby colleges.</p>
+        <p class="sc-card-desc ne">नेपालका ७ प्रदेश मध्ये प्रत्येकले आफ्नै छात्रवृत्ति कार्यक्रम सञ्चालन गर्छ। कर्णाली र सुदूरपश्चिमले स्थानीय विद्यार्थीलाई विशेष सहायता दिन्छ।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">🗺️</span><span class="en">Province-Specific</span><span class="ne">प्रदेश-विशिष्ट</span></div>
+          <div class="meta-pill"><span class="mp-ico">🏠</span><span class="en">Local Residents Priority</span><span class="ne">स्थानीय बासिन्दा प्राथमिकता</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Permanent resident of that province</div>
+            <div class="elig-item ne">सम्बन्धित प्रदेशको स्थायी बासिन्दा</div>
+            <div class="elig-item en">Passed SEE from a school in same province</div>
+            <div class="elig-item ne">उही प्रदेशको विद्यालयबाट SEE उत्तीर्ण</div>
+            <div class="elig-item en">Must enrol in province-approved college</div>
+            <div class="elig-item ne">प्रदेश-अनुमोदित कलेजमा भर्ना अनिवार्य</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip normal">📅 <span class="en">Check your Province portal</span><span class="ne">प्रदेश पोर्टल हेर्नुहोस्</span></div>
+          <button class="apply-btn en" onclick="showSteps('province')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('province')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d3" data-type="govt">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7c3aed,#5b21b6);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Disabled Students Scholarship</div>
+          <div class="sc-card-name ne">अपाङ्गता भएका विद्यार्थी छात्रवृत्ति</div>
+          <div class="sc-card-amt" style="background:rgba(124,58,237,.12);color:#a78bfa">Full Waiver</div>
+        </div>
+        <p class="sc-card-desc en">Nepal's disability act mandates free education for students with certified disabilities at government institutions. Additional monthly allowance of NPR 1,000–3,000 may apply.</p>
+        <p class="sc-card-desc ne">नेपालको अपाङ्गता ऐनले सरकारी संस्थामा प्रमाणित अपाङ्गता भएका विद्यार्थीलाई निःशुल्क शिक्षा अनिवार्य गरेको छ।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">🏛️</span><span class="en">Government Colleges</span><span class="ne">सरकारी कलेज</span></div>
+          <div class="meta-pill"><span class="mp-ico">📄</span><span class="en">Disability Card Required</span><span class="ne">अपाङ्गता परिचयपत्र</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Valid disability identification card</div>
+            <div class="elig-item ne">मान्य अपाङ्गता परिचयपत्र</div>
+            <div class="elig-item en">Passed SEE</div>
+            <div class="elig-item ne">SEE उत्तीर्ण</div>
+            <div class="elig-item en">Enrol in government institution</div>
+            <div class="elig-item ne">सरकारी संस्थामा भर्ना</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip open">✅ <span class="en">Open — Apply at institution</span><span class="ne">खुला — संस्थामा आवेदन</span></div>
+          <button class="apply-btn en" onclick="showSteps('disability')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('disability')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SECTION 2: CTEVT ══ -->
+  <div class="sc-section reveal" id="sec-ctevt">
+    <div class="sc-section-hd">
+      <div class="sc-type-icon" style="background:rgba(232,160,32,.1);border-color:rgba(232,160,32,.25)">🔧</div>
+      <div class="sc-section-meta">
+        <h2 class="en">CTEVT Reserved Seat Scholarships</h2>
+        <h2 class="ne">CTEVT आरक्षित सिट छात्रवृत्तिहरू</h2>
+        <p class="en">CTEVT reserves a fixed percentage of seats for Dalit, Janajati, women, disabled, and remote area students at heavily subsidised fees. No GPA minimum required.</p>
+        <p class="ne">CTEVT ले दलित, जनजाति, महिला, अपाङ्ग र दुर्गम क्षेत्रका विद्यार्थीका लागि निश्चित प्रतिशत सिट आरक्षित राख्छ।</p>
+        <div class="sc-count-badge" style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.2);color:var(--gold-l);font-family:var(--ff-m);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-top:10px">3 <span class="en">Scholarship Types</span><span class="ne">छात्रवृत्ति प्रकार</span></div>
+      </div>
+    </div>
+    <div class="sc-grid">
+
+      <div class="sc-card reveal" data-type="ctevt dalit">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#c47810);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Dalit & Janajati Reserved Seats</div>
+          <div class="sc-card-name ne">दलित र जनजाति आरक्षित सिट</div>
+          <div class="sc-card-amt" style="background:rgba(232,160,32,.12);color:var(--gold-l)">80% Fee Cut</div>
+        </div>
+        <p class="sc-card-desc en">CTEVT reserves 15% of seats for Dalit students and 20% for Janajati students with drastically reduced fees. Programs include Civil, Computer, Electrical, Nursing, Agriculture and more.</p>
+        <p class="sc-card-desc ne">CTEVT ले दलित विद्यार्थीका लागि १५% र जनजातिका लागि २०% सिट आरक्षित राखेको छ। अत्यन्त कम शुल्क।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">📍</span><span class="en">All CTEVT Institutes</span><span class="ne">सबै CTEVT संस्थान</span></div>
+          <div class="meta-pill"><span class="mp-ico">🎓</span><span class="en">All CTEVT Programs</span><span class="ne">सबै CTEVT कार्यक्रम</span></div>
+          <div class="meta-pill"><span class="mp-ico">📄</span><span class="en">Caste Certificate Required</span><span class="ne">जात प्रमाणपत्र आवश्यक</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Dalit or Janajati caste certificate</div>
+            <div class="elig-item ne">दलित वा जनजाति जात प्रमाणपत्र</div>
+            <div class="elig-item en">Passed SEE (no GPA minimum)</div>
+            <div class="elig-item ne">SEE उत्तीर्ण (न्यूनतम GPA छैन)</div>
+            <div class="elig-item en">Apply directly to CTEVT institute</div>
+            <div class="elig-item ne">CTEVT संस्थानमा सिधै आवेदन</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip open">✅ <span class="en">Open each admission cycle</span><span class="ne">प्रत्येक भर्ना चक्रमा खुला</span></div>
+          <button class="apply-btn en" onclick="showSteps('ctevt_dalit')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('ctevt_dalit')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d1" data-type="ctevt">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ec4899,#be185d);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Women's Reserved Seats (CTEVT)</div>
+          <div class="sc-card-name ne">महिला आरक्षित सिट (CTEVT)</div>
+          <div class="sc-card-amt" style="background:rgba(236,72,153,.1);color:#f472b6">50% Fee Cut</div>
+        </div>
+        <p class="sc-card-desc en">CTEVT reserves 40% of seats for women across all technical programs. Fee reductions apply and some programs are fully sponsored for women from remote areas.</p>
+        <p class="sc-card-desc ne">CTEVT ले सबै प्राविधिक कार्यक्रममा ४०% सिट महिलाका लागि आरक्षित राखेको छ। दुर्गम क्षेत्रका महिलाका लागि पूर्ण अनुदान।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">♀️</span><span class="en">Women Only</span><span class="ne">महिलामात्र</span></div>
+          <div class="meta-pill"><span class="mp-ico">📍</span><span class="en">All CTEVT Institutes</span><span class="ne">सबै CTEVT</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Female applicant</div>
+            <div class="elig-item ne">महिला आवेदक</div>
+            <div class="elig-item en">Passed SEE</div>
+            <div class="elig-item ne">SEE उत्तीर्ण</div>
+            <div class="elig-item en">Apply to CTEVT institute directly</div>
+            <div class="elig-item ne">CTEVT संस्थानमा सिधै आवेदन</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip open">✅ <span class="en">Open each intake</span><span class="ne">प्रत्येक भर्नामा खुला</span></div>
+          <button class="apply-btn en" onclick="showSteps('ctevt_women')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('ctevt_women')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d2" data-type="ctevt dalit">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),#0a7a72);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Remote Area Scholarship (CTEVT)</div>
+          <div class="sc-card-name ne">दुर्गम क्षेत्र छात्रवृत्ति (CTEVT)</div>
+          <div class="sc-card-amt" style="background:rgba(13,148,136,.1);color:#2dd4bf">Full Subsidy</div>
+        </div>
+        <p class="sc-card-desc en">Students from designated remote districts (Karnali, Sudurpashchim and others) receive full-fee subsidies at CTEVT institutes. Covers tuition, tools/materials, and sometimes accommodation.</p>
+        <p class="sc-card-desc ne">तोकिएका दुर्गम जिल्ला (कर्णाली, सुदूरपश्चिम आदि) का विद्यार्थीले CTEVT मा पूर्ण शुल्क अनुदान पाउँछन्।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">🏔️</span><span class="en">Remote Districts Only</span><span class="ne">दुर्गम जिल्ला</span></div>
+          <div class="meta-pill"><span class="mp-ico">🏠</span><span class="en">May Include Hostel</span><span class="ne">होस्टल समावेश हुनसक्छ</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Permanent address in designated remote district</div>
+            <div class="elig-item ne">तोकिएको दुर्गम जिल्लामा स्थायी ठेगाना</div>
+            <div class="elig-item en">Passed SEE</div>
+            <div class="elig-item ne">SEE उत्तीर्ण</div>
+            <div class="elig-item en">Recommendation from local ward office</div>
+            <div class="elig-item ne">स्थानीय वडा कार्यालयको सिफारिस</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip open">✅ <span class="en">Open each intake</span><span class="ne">प्रत्येक भर्नामा खुला</span></div>
+          <button class="apply-btn en" onclick="showSteps('ctevt_remote')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('ctevt_remote')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SECTION 3: NGO / AID ══ -->
+  <div class="sc-section reveal" id="sec-ngo">
+    <div class="sc-section-hd">
+      <div class="sc-type-icon" style="background:rgba(13,148,136,.1);border-color:rgba(13,148,136,.25)">🤝</div>
+      <div class="sc-section-meta">
+        <h2 class="en">NGO & International Aid Scholarships</h2>
+        <h2 class="ne">NGO र अन्तर्राष्ट्रिय सहायता छात्रवृत्ति</h2>
+        <p class="en">Funded by NGOs and international organisations. Often targeted at girls, dalits, conflict-affected students, and those from extremely poor backgrounds.</p>
+        <p class="ne">NGO र अन्तर्राष्ट्रिय संस्थाद्वारा वित्तपोषित। प्राय: बालिका, दलित, द्वन्द्वप्रभावित र अत्यन्त गरिब विद्यार्थीलाई लक्षित।</p>
+        <div class="sc-count-badge" style="background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.2);color:#2dd4bf;font-family:var(--ff-m);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-top:10px">3 <span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></div>
+      </div>
+    </div>
+    <div class="sc-grid">
+
+      <div class="sc-card reveal" data-type="ngo">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),#0a7a72);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Nepal Youth Foundation (NYF)</div>
+          <div class="sc-card-name ne">नेपाल युथ फाउन्डेशन</div>
+          <div class="sc-card-amt" style="background:rgba(13,148,136,.1);color:#2dd4bf">Full Support</div>
+        </div>
+        <p class="sc-card-desc en">NYF supports girls and disadvantaged students through the Scholarship for Children at Risk program. Covers tuition, books, uniforms, and sometimes living expenses.</p>
+        <p class="sc-card-desc ne">NYF ले जोखिममा परेका बालबालिकाको छात्रवृत्ति कार्यक्रम मार्फत बालिका र सुविधावञ्चित विद्यार्थीलाई सहायता गर्छ।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">👧</span><span class="en">Girls Priority</span><span class="ne">बालिका प्राथमिकता</span></div>
+          <div class="meta-pill"><span class="mp-ico">📚</span><span class="en">Tuition + Books</span><span class="ne">शुल्क + किताब</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">From extremely poor or at-risk background</div>
+            <div class="elig-item ne">अत्यन्त गरिब वा जोखिम पृष्ठभूमि</div>
+            <div class="elig-item en">Passed SEE with good academic record</div>
+            <div class="elig-item ne">राम्रो शैक्षिक रेकर्डसहित SEE उत्तीर्ण</div>
+            <div class="elig-item en">Apply through NYF office in Kathmandu</div>
+            <div class="elig-item ne">काठमाडौँको NYF कार्यालय मार्फत आवेदन</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip normal">📅 <span class="en">Apply by August each year</span><span class="ne">प्रत्येक वर्ष असारसम्म आवेदन</span></div>
+          <button class="apply-btn en" onclick="showSteps('nyf')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('nyf')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d1" data-type="ngo">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0ea5e9,#0369a1);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">UNICEF / World Bank Education Support</div>
+          <div class="sc-card-name ne">UNICEF / विश्व बैंक शिक्षा सहायता</div>
+          <div class="sc-card-amt" style="background:rgba(14,165,233,.1);color:#38bdf8">Varies</div>
+        </div>
+        <p class="sc-card-desc en">Through Nepal's Ministry of Education, UNICEF and World Bank fund conditional cash transfers and education grants for students from the poorest households, particularly girls in remote areas.</p>
+        <p class="sc-card-desc ne">नेपालको शिक्षा मन्त्रालय मार्फत UNICEF र विश्व बैंकले सबैभन्दा गरिब परिवारका विद्यार्थीलाई शर्तसहित नगद हस्तान्तरण प्रदान गर्छन्।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">🏛️</span><span class="en">Via Ministry of Education</span><span class="ne">शिक्षा मन्त्रालय मार्फत</span></div>
+          <div class="meta-pill"><span class="mp-ico">💵</span><span class="en">Cash Transfer + Tuition</span><span class="ne">नगद + शुल्क</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">Below poverty line household (verified)</div>
+            <div class="elig-item ne">गरिबी रेखामुनिको घरपरिवार (प्रमाणित)</div>
+            <div class="elig-item en">Regular school attendance record</div>
+            <div class="elig-item ne">नियमित विद्यालय उपस्थिति रेकर्ड</div>
+            <div class="elig-item en">Apply through local municipality</div>
+            <div class="elig-item ne">स्थानीय नगरपालिका मार्फत आवेदन</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip normal">📅 <span class="en">Annual — via municipality</span><span class="ne">वार्षिक — नगरपालिका मार्फत</span></div>
+          <button class="apply-btn en" onclick="showSteps('unicef')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('unicef')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+      <div class="sc-card reveal d2" data-type="ngo merit">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#d97706);border-radius:var(--r) var(--r) 0 0"></div>
+        <div class="sc-card-top">
+          <div class="sc-card-name en">Institution-Specific Scholarships</div>
+          <div class="sc-card-name ne">संस्था-विशेष छात्रवृत्तिहरू</div>
+          <div class="sc-card-amt" style="background:rgba(245,158,11,.1);color:#fbbf24">10–100%</div>
+        </div>
+        <p class="sc-card-desc en">Many private colleges offer their own scholarships for top-performing SEE students. St. Xavier's, Budhanilkantha, and others provide merit-based full fee waivers for exceptional candidates.</p>
+        <p class="sc-card-desc ne">धेरै निजी कलेजले SEE मा उत्कृष्ट प्रदर्शन गर्ने विद्यार्थीलाई आफ्नै छात्रवृत्ति प्रदान गर्छन्।</p>
+        <div class="sc-card-meta">
+          <div class="meta-pill"><span class="mp-ico">⭐</span><span class="en">Merit-Based</span><span class="ne">मेरिट आधारित</span></div>
+          <div class="meta-pill"><span class="mp-ico">🏫</span><span class="en">Varies by Institution</span><span class="ne">संस्थाअनुसार फरक</span></div>
+        </div>
+        <div class="sc-card-eligibility">
+          <div class="elig-title en">Eligibility Requirements</div>
+          <div class="elig-title ne">योग्यताका सर्तहरू</div>
+          <div class="elig-list">
+            <div class="elig-item en">GPA 3.5+ in SEE (varies by institution)</div>
+            <div class="elig-item ne">SEE मा GPA ३.५+ (संस्थाअनुसार फरक)</div>
+            <div class="elig-item en">Apply directly to the institution</div>
+            <div class="elig-item ne">संस्थामा सिधै आवेदन</div>
+            <div class="elig-item en">May require entrance test</div>
+            <div class="elig-item ne">प्रवेश परीक्षा आवश्यक हुनसक्छ</div>
+          </div>
+        </div>
+        <div class="sc-card-footer">
+          <div class="deadline-chip normal">📅 <span class="en">Admission season — check each college</span><span class="ne">भर्ना सिजन — प्रत्येक कलेज हेर्नुहोस्</span></div>
+          <button class="apply-btn en" onclick="showSteps('institution')">How to Apply →</button>
+          <button class="apply-btn ne" onclick="showSteps('institution')">कसरी आवेदन →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ HOW TO APPLY ══ -->
+  <div class="how-section reveal" id="howToApply">
+    <div class="sec-kicker"><span class="en">Step-by-Step Guide</span><span class="ne">चरण-दर-चरण गाइड</span></div>
+    <h2 style="font-family:var(--ff-d);font-size:clamp(22px,3vw,32px);font-weight:700;margin-bottom:8px" class="en">How to Apply for the<br><span style="background:linear-gradient(90deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Municipal Quota Scholarship</span></h2>
+    <h2 style="font-family:var(--ff-d);font-size:clamp(22px,3vw,32px);font-weight:700;margin-bottom:8px" class="ne">नगरपालिका कोटा छात्रवृत्तिका लागि<br><span style="background:linear-gradient(90deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">कसरी आवेदन दिने</span></h2>
+    <p style="color:var(--muted);font-size:14px;margin-top:8px" class="en">The most accessible scholarship for government school students — here's exactly what to do.</p>
+    <p style="color:var(--muted);font-size:14px;margin-top:8px" class="ne">सरकारी विद्यालयका विद्यार्थीका लागि सबैभन्दा सुलभ छात्रवृत्ति — यहाँ के गर्ने भन्ने छ।</p>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="how-num"><div class="glow"></div>1</div>
+        <h4 class="en">Collect Documents</h4>
+        <h4 class="ne">कागजात संकलन</h4>
+        <p class="en">Get your SEE marksheet, school leaving certificate, citizenship (or birth certificate), and a recommendation letter from your school.</p>
+        <p class="ne">SEE अंकपत्र, विद्यालय छोड्ने प्रमाणपत्र, नागरिकता र विद्यालयको सिफारिस पत्र लिनुहोस्।</p>
+      </div>
+      <div class="how-step reveal d1">
+        <div class="how-num"><div class="glow"></div>2</div>
+        <h4 class="en">Visit Municipality</h4>
+        <h4 class="ne">नगरपालिका जानुहोस्</h4>
+        <p class="en">Go to your local Municipality / Rural Municipality education department within 3 months of SEE results. Request the scholarship form.</p>
+        <p class="ne">SEE नतिजाको ३ महिनाभित्र स्थानीय नगरपालिका/गाउँपालिकाको शिक्षा शाखामा जानुहोस्।</p>
+      </div>
+      <div class="how-step reveal d2">
+        <div class="how-num"><div class="glow"></div>3</div>
+        <h4 class="en">Choose Your College</h4>
+        <h4 class="ne">कलेज छान्नुहोस्</h4>
+        <p class="en">Select a private +2 college in your area. Confirm they have Municipal Quota seats available. Get their acceptance letter.</p>
+        <p class="ne">आफ्नो क्षेत्रको निजी +2 कलेज छान्नुहोस्। नगरपालिका कोटा सिट उपलब्ध छ कि छैन पुष्टि गर्नुहोस्।</p>
+      </div>
+      <div class="how-step reveal d3">
+        <div class="how-num"><div class="glow"></div>4</div>
+        <h4 class="en">Submit & Follow Up</h4>
+        <h4 class="ne">पेश गर्नुहोस् र पछ्याउनुहोस्</h4>
+        <p class="en">Submit your complete application to the municipality. Keep copies of everything. Follow up after 2 weeks for approval status.</p>
+        <p class="ne">नगरपालिकामा सम्पूर्ण आवेदन पेश गर्नुहोस्। सबैको प्रतिलिपि राख्नुहोस्। २ हप्ता पछि स्थिति जाँच्नुहोस्।</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL: How to Apply -->
+<div class="mob-ov" id="stepsModal" onclick="closeSteps(event)" style="z-index:600">
+  <div style="background:#0c1322;border:1px solid var(--border2);border-radius:24px;max-width:560px;width:100%;margin:auto;padding:36px;position:relative;max-height:90vh;overflow-y:auto">
+    <button onclick="closeSteps()" style="position:absolute;top:16px;right:16px;background:var(--surface);border:none;color:var(--muted);width:34px;height:34px;border-radius:9px;font-size:17px;cursor:pointer">✕</button>
+    <div id="stepsContent"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div class="f-about">
+      <a href="../step1-home/index.html" class="logo">
+        <div class="logo-mark">📚</div>
+        <div class="logo-name">Pathshala <em>Guide</em></div>
+      </a>
+      <p class="en">Free, bilingual career guidance for SEE graduates across Nepal. Bridging the information gap for government school students.</p>
+      <p class="ne">नेपालका SEE उत्तीर्णहरूको लागि निःशुल्क, द्विभाषिक क्यारियर मार्गदर्शन।</p>
+      <div class="f-badge">🇳🇵 NEB &amp; CTEVT Verified</div>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Pathways</h5><h5 class="ne">मार्गहरू</h5>
+      <a href="../step2-pathways/index.html"><span class="en">🔬 Science</span><span class="ne">🔬 विज्ञान</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">📊 Management</span><span class="ne">📊 व्यवस्थापन</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">⚖️ Law & Humanities</span><span class="ne">⚖️ कानून</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">🔧 CTEVT</span><span class="ne">🔧 CTEVT</span></a>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Resources</h5><h5 class="ne">स्रोतहरू</h5>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="#"><span class="en">Download Guides</span><span class="ne">गाइड डाउनलोड</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">Career Roadmap</span><span class="ne">क्यारियर नक्सा</span></a>
+    </div>
+    <div class="f-col">
+      <h5>Official Sources</h5>
+      <a href="https://neb.ntc.net.np" target="_blank">✅ NEB Nepal</a>
+      <a href="https://www.ctevt.org.np" target="_blank">✅ CTEVT</a>
+      <a href="https://moe.gov.np" target="_blank">✅ Ministry of Education</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span class="en">© 2025 Pathshala Guide · Free for all students 🇳🇵</span>
+    <span class="ne">© २०२५ Pathshala Guide · सबैको लागि निःशुल्क 🇳🇵</span>
+    <span style="color:rgba(255,255,255,.2)">Verified from NEB, CTEVT & Ministry of Education</span>
+  </div>
+</footer>
+  <!-- Shared JS -->
+  <script src="../shared/shared.js"></script>
+  <!-- Page JS -->
+  <script src="script.js"></script>
+</body>
+</html>

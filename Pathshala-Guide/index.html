@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — Project Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0a0e1a; --ink2:#111827; --crimson:#c0272d;
+    --gold:#e8a020; --gold-l:#f5c842; --teal:#0d9488;
+    --surface:rgba(255,255,255,.04); --border:rgba(255,255,255,.10);
+    --border2:rgba(255,255,255,.18); --text:#f0f4f8; --muted:#8b9ab0;
+    --ff-d:'Playfair Display',Georgia,serif;
+    --ff-b:'DM Sans',sans-serif; --ff-m:'DM Mono',monospace;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--ff-b);background:var(--ink);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
+  body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999}
+  .wrap{max-width:680px;width:100%;position:relative;z-index:1}
+  .logo{display:flex;align-items:center;gap:12px;margin-bottom:48px;justify-content:center}
+  .logo-mark{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--crimson),#8b1a1f);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(192,39,45,.4)}
+  .logo-name{font-family:var(--ff-d);font-size:24px;font-weight:700;color:#fff}
+  .logo-name em{color:var(--gold);font-style:normal}
+  h1{font-family:var(--ff-d);font-size:clamp(28px,5vw,44px);font-weight:900;text-align:center;line-height:1.1;margin-bottom:12px;letter-spacing:-1px}
+  h1 span{background:linear-gradient(90deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .sub{text-align:center;color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:48px;max-width:480px;margin-left:auto;margin-right:auto}
+  .steps{display:flex;flex-direction:column;gap:12px;margin-bottom:48px}
+  .step-card{display:flex;align-items:center;gap:16px;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;text-decoration:none;color:var(--text);transition:all .25s;position:relative;overflow:hidden}
+  .step-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+  .step-card:hover{transform:translateX(6px);border-color:var(--border2);background:rgba(255,255,255,.07)}
+  .step-card:hover::before{transform:scaleX(1)}
+  .step-num{font-family:var(--ff-m);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);width:20px;flex-shrink:0}
+  .step-icon{font-size:24px;flex-shrink:0}
+  .step-info{flex:1}
+  .step-name{font-family:var(--ff-d);font-size:16px;font-weight:700;margin-bottom:3px}
+  .step-desc{font-size:12.5px;color:var(--muted);font-family:var(--ff-m)}
+  .step-arr{color:var(--muted);font-size:18px;transition:transform .2s}
+  .step-card:hover .step-arr{transform:translateX(4px)}
+  .folder-note{text-align:center;font-family:var(--ff-m);font-size:11px;color:var(--muted);letter-spacing:.5px;padding-top:24px;border-top:1px solid var(--border)}
+  .folder-note code{background:rgba(255,255,255,.06);padding:2px 8px;border-radius:5px;color:rgba(255,255,255,.5)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <div class="logo-mark">📚</div>
+    <div class="logo-name">Pathshala <em>Guide</em></div>
+  </div>
+  <h1>Project <span>Structure</span></h1>
+  <p class="sub">5 pages · Each with separate HTML, CSS and JS · All interconnected via relative paths</p>
+
+  <div class="steps">
+    <a href="step1-home/index.html" class="step-card" style="--accent:#c0272d">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c0272d,#e8a020);transform:scaleX(0);transform-origin:left;transition:transform .3s"></div>
+      <span class="step-num">01</span>
+      <span class="step-icon">🏠</span>
+      <div class="step-info">
+        <div class="step-name">Homepage</div>
+        <div class="step-desc">step1-home/ · index.html · style.css · script.js</div>
+      </div>
+      <span class="step-arr">→</span>
+    </a>
+    <a href="step2-pathways/index.html" class="step-card">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#16a34a,#0ea5e9);transform:scaleX(0);transform-origin:left;transition:transform .3s"></div>
+      <span class="step-num">02</span>
+      <span class="step-icon">🗺️</span>
+      <div class="step-info">
+        <div class="step-name">Pathways Detail</div>
+        <div class="step-desc">step2-pathways/ · index.html · style.css · script.js</div>
+      </div>
+      <span class="step-arr">→</span>
+    </a>
+    <a href="step3-institutions/index.html" class="step-card">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#0ea5e9,#0d9488);transform:scaleX(0);transform-origin:left;transition:transform .3s"></div>
+      <span class="step-num">03</span>
+      <span class="step-icon">🏫</span>
+      <div class="step-info">
+        <div class="step-name">Institutions + Province Filter</div>
+        <div class="step-desc">step3-institutions/ · index.html · style.css · script.js</div>
+      </div>
+      <span class="step-arr">→</span>
+    </a>
+    <a href="step4-scholarships/index.html" class="step-card">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#e8a020,#f5c842);transform:scaleX(0);transform-origin:left;transition:transform .3s"></div>
+      <span class="step-num">04</span>
+      <span class="step-icon">💰</span>
+      <div class="step-info">
+        <div class="step-name">Scholarships</div>
+        <div class="step-desc">step4-scholarships/ · index.html · style.css · script.js</div>
+      </div>
+      <span class="step-arr">→</span>
+    </a>
+    <a href="step5-gpa-tool/index.html" class="step-card">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#0d9488,#8b5cf6);transform:scaleX(0);transform-origin:left;transition:transform .3s"></div>
+      <span class="step-num">05</span>
+      <span class="step-icon">🎯</span>
+      <div class="step-info">
+        <div class="step-name">GPA Tool & Career Roadmap</div>
+        <div class="step-desc">step5-gpa-tool/ · index.html · style.css · script.js</div>
+      </div>
+      <span class="step-arr">→</span>
+    </a>
+  </div>
+
+  <div class="folder-note">
+    Shared design system → <code>shared/shared.css</code> + <code>shared/shared.js</code>
+  </div>
+</div>
+
+<script>
+  // Animate top bars on hover via JS since CSS pseudo-element transitions don't inherit vars easily
+  document.querySelectorAll('.step-card').forEach(card => {
+    const bar = card.querySelector('div[style*="scaleX(0)"]');
+    card.addEventListener('mouseenter', () => { if(bar) bar.style.transform = 'scaleX(1)' });
+    card.addEventListener('mouseleave', () => { if(bar) bar.style.transform = 'scaleX(0)' });
+  });
+</script>
+</body>
+</html>

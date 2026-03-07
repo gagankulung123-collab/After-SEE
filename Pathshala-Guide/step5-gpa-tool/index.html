@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — GPA Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Shared design system -->
+  <link rel="stylesheet" href="../shared/shared.css">
+  <!-- step5-gpa-tool page styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="en">🎯 Enter your SEE GPA to instantly see which pathways are open to you</span>
+  <span class="ne">🎯 आफ्नो SEE GPA प्रविष्ट गर्नुहोस् र कुन मार्गहरू खुला छन् तुरुन्तै हेर्नुहोस्</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="../step1-home/index.html" class="logo">
+      <div class="logo-mark">📚</div>
+      <div class="logo-name">Pathshala <em>Guide</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="../step1-home/index.html"><span class="en">Home</span><span class="ne">गृहपृष्ठ</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">Pathways</span><span class="ne">मार्गहरू</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html" class="active"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="bEN" class="active" onclick="setLang('en')">EN</button>
+        <button id="bNE" onclick="setLang('ne')">नेपाली</button>
+      </div>
+      <button class="btn-cta en">Download Guide</button>
+      <button class="btn-cta ne">गाइड डाउनलोड</button>
+      <button class="hamburger" onclick="openNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-ov" id="mobOv" onclick="closeNav(event)">
+  <div class="mob-drawer">
+    <button class="xbtn" onclick="closeNav()">✕</button>
+    <a href="../step1-home/index.html"><span class="en">🏠 Home</span><span class="ne">🏠 गृहपृष्ठ</span></a>
+    <a href="../step2-pathways/index.html"><span class="en">🗺 Pathways</span><span class="ne">🗺 मार्गहरू</span></a>
+    <a href="../step3-institutions/index.html"><span class="en">🏫 Institutions</span><span class="ne">🏫 संस्थाहरू</span></a>
+    <a href="../step4-scholarships/index.html"><span class="en">💰 Scholarships</span><span class="ne">💰 छात्रवृत्ति</span></a>
+    <a href="../step5-gpa-tool/index.html"><span class="en">🎯 GPA Tool</span><span class="ne">🎯 GPA टूल</span></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <!-- LEFT TEXT -->
+    <div class="hero-left">
+      <div class="breadcrumb">
+        <a href="../step1-home/index.html" class="en">Home</a>
+        <a href="../step1-home/index.html" class="ne">गृहपृष्ठ</a>
+        <span class="sep">›</span>
+        <span style="color:rgba(255,255,255,.55)" class="en">GPA Tool</span>
+        <span style="color:rgba(255,255,255,.55)" class="ne">GPA टूल</span>
+      </div>
+      <div class="sec-kicker reveal"><span class="en">Interactive Career Finder</span><span class="ne">इन्टरएक्टिभ क्यारियर खोज</span></div>
+      <h1 class="reveal d1">
+        <span class="en">Your GPA.<span class="accent">Your Future.</span></span>
+        <span class="ne">तपाईंको GPA।<span class="accent">तपाईंको भविष्य।</span></span>
+      </h1>
+      <p class="sub reveal d2 en">Slide to your SEE GPA and instantly see every pathway, career, and roadmap available to you — with no judgment, no limits.</p>
+      <p class="sub reveal d2 ne">आफ्नो SEE GPA मा स्लाइड गर्नुहोस् र तुरुन्तै उपलब्ध सबै मार्ग, क्यारियर र रोडम्याप हेर्नुहोस्।</p>
+
+      <!-- PATHWAY LEGEND -->
+      <div class="reveal d3" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px">
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#4ade80;display:inline-block"></span><span class="en">Science (2.0+)</span><span class="ne">विज्ञान</span></div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#38bdf8;display:inline-block"></span><span class="en">Management (1.6+)</span><span class="ne">व्यवस्थापन</span></div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#a78bfa;display:inline-block"></span><span class="en">Law (1.6+)</span><span class="ne">कानून</span></div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#fbbf24;display:inline-block"></span><span class="en">CTEVT (any GPA)</span><span class="ne">CTEVT</span></div>
+      </div>
+    </div>
+
+    <!-- GPA CARD -->
+    <div class="gpa-card reveal d2" id="gpaCard">
+      <div class="gc-tag en">YOUR SEE GPA</div>
+      <div class="gc-tag ne">तपाईंको SEE GPA</div>
+      <div class="gc-gpa-display" id="gpaDisplay">2.00</div>
+      <div class="gc-gpa-label en" id="gpaGrade">Grade B — Good Standing</div>
+      <div class="gc-gpa-label ne" id="gpaGradeNe">ग्रेड B — राम्रो अवस्था</div>
+
+      <div class="slider-wrap">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slider-fill" id="sliderFill" style="width:25%"></div>
+          <div class="slider-thumb" id="sliderThumb" style="left:25%"></div>
+        </div>
+        <div class="slider-labels"><span>1.00</span><span>2.00</span><span>3.00</span><span>4.00</span></div>
+      </div>
+
+      <div class="gpa-input-row">
+        <label class="en">Type GPA:</label>
+        <label class="ne">GPA टाइप:</label>
+        <input type="number" class="gpa-num-input" id="gpaInput" value="2.00" min="1.00" max="4.00" step="0.05">
+      </div>
+
+      <div style="font-family:var(--ff-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px" class="en">Pathways Unlocked</div>
+      <div style="font-family:var(--ff-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px" class="ne">खुला मार्गहरू</div>
+      <div class="pathway-results" id="pillResults"></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- QUICK STATS -->
+<div class="quick-stats" id="quickStats">
+  <div class="qs-item"><div class="qs-num" id="qsPathways">—</div><div class="qs-lbl en">Pathways Open</div><div class="qs-lbl ne">मार्गहरू खुला</div></div>
+  <div class="qs-item"><div class="qs-num" id="qsCareers">—</div><div class="qs-lbl en">Career Options</div><div class="qs-lbl ne">क्यारियर विकल्प</div></div>
+  <div class="qs-item"><div class="qs-num" id="qsDegrees">—</div><div class="qs-lbl en">Degree Programs</div><div class="qs-lbl ne">डिग्री कार्यक्रम</div></div>
+  <div class="qs-item"><div class="qs-num" id="qsSchol" style="color:var(--gold)">✓</div><div class="qs-lbl en">Scholarships Eligible</div><div class="qs-lbl ne">छात्रवृत्ति योग्य</div></div>
+</div>
+
+<!-- RESULTS -->
+<div class="results-section">
+  <div class="rs-hd reveal">
+    <div>
+      <div class="sec-kicker"><span class="en">Your Personalised Results</span><span class="ne">तपाईंको व्यक्तिगत नतिजा</span></div>
+      <h2 class="en">Roadmap for GPA <span id="hdGPA">2.00</span></h2>
+      <h2 class="ne">GPA <span id="hdGPAne">2.00</span> को लागि रोडम्याप</h2>
+      <div class="rs-sub en" id="rsSubEN">Showing all pathways and careers available at your current GPA.</div>
+      <div class="rs-sub ne" id="rsSubNE">तपाईंको हालको GPA मा उपलब्ध सबै मार्ग र क्यारियरहरू देखाइँदैछ।</div>
+    </div>
+    <button class="share-btn" onclick="shareResult()">📤 <span class="en">Share Results</span><span class="ne">नतिजा साझा</span></button>
+  </div>
+
+  <!-- PATHWAY BLOCKS -->
+  <div id="pathwayBlocks"></div>
+
+  <!-- COMPARISON TABLE -->
+  <div class="compare-section reveal" style="margin-top:48px">
+    <div class="sec-kicker"><span class="en">Side-by-Side Comparison</span><span class="ne">तुलनात्मक तालिका</span></div>
+    <h3 style="font-family:var(--ff-d);font-size:22px;font-weight:700;margin-bottom:4px" class="en">All Pathways at a Glance</h3>
+    <h3 style="font-family:var(--ff-d);font-size:22px;font-weight:700;margin-bottom:4px" class="ne">सबै मार्गको तुलना</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:0" class="en">Green rows are available to you at your current GPA.</p>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:0" class="ne">हरियो पंक्तिहरू तपाईंको हालको GPA मा उपलब्ध छन्।</p>
+    <div style="overflow-x:auto">
+      <table class="compare-table" id="compareTable"></table>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div class="f-about">
+      <a href="../step1-home/index.html" class="logo">
+        <div class="logo-mark">📚</div>
+        <div class="logo-name">Pathshala <em>Guide</em></div>
+      </a>
+      <p class="en">Free, bilingual career guidance for SEE graduates across Nepal.</p>
+      <p class="ne">SEE उत्तीर्णहरूको लागि निःशुल्क द्विभाषिक मार्गदर्शन।</p>
+      <div class="f-badge">🇳🇵 NEB &amp; CTEVT Verified</div>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Pathways</h5><h5 class="ne">मार्गहरू</h5>
+      <a href="../step2-pathways/index.html">🔬 Science</a>
+      <a href="../step2-pathways/index.html">📊 Management</a>
+      <a href="../step2-pathways/index.html">⚖️ Law &amp; Humanities</a>
+      <a href="../step2-pathways/index.html">🔧 CTEVT</a>
+    </div>
+    <div class="f-col">
+      <h5 class="en">Tools</h5><h5 class="ne">टूलहरू</h5>
+      <a href="../step3-institutions/index.html"><span class="en">Find Institutions</span><span class="ne">संस्था खोज</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="f-col">
+      <h5>Official Sources</h5>
+      <a href="https://neb.ntc.net.np" target="_blank">✅ NEB Nepal</a>
+      <a href="https://www.ctevt.org.np" target="_blank">✅ CTEVT</a>
+      <a href="https://moe.gov.np" target="_blank">✅ Ministry of Education</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span class="en">© 2025 Pathshala Guide · Free for all students 🇳🇵</span>
+    <span class="ne">© २०२५ Pathshala Guide · सबैको लागि निःशुल्क 🇳🇵</span>
+    <span style="color:rgba(255,255,255,.2)">NEB & CTEVT Verified</span>
+  </div>
+</footer>
+  <!-- Shared JS -->
+  <script src="../shared/shared.js"></script>
+  <!-- Page JS -->
+  <script src="script.js"></script>
+</body>
+</html>

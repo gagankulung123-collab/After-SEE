@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — Pathways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Shared design system -->
+  <link rel="stylesheet" href="../shared/shared.css">
+  <!-- step2-pathways page styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="en">🇳🇵 Free guidance for SEE graduates across all 7 provinces of Nepal — No signup required</span>
+  <span class="ne">🇳🇵 नेपालका सबै ७ प्रदेशका SEE उत्तीर्णहरूको लागि निःशुल्क मार्गदर्शन</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="../step1-home/index.html" class="logo">
+      <div class="logo-mark">📚</div>
+      <div class="logo-name">Pathshala <em>Guide</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="../step1-home/index.html"><span class="en">Home</span><span class="ne">गृहपृष्ठ</span></a>
+      <a href="../step2-pathways/index.html" class="active"><span class="en">Pathways</span><span class="ne">मार्गहरू</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="bEN" class="active" onclick="setLang('en')">EN</button>
+        <button id="bNE" onclick="setLang('ne')">नेपाली</button>
+      </div>
+      <button class="btn-cta en">Download Guide</button>
+      <button class="btn-cta ne">गाइड डाउनलोड</button>
+      <button class="hamburger" onclick="openNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="overlay" id="ov" onclick="closeNav(event)">
+  <div class="mob-drawer">
+    <button class="xbtn" onclick="closeNav()">✕</button>
+    <a href="../step1-home/index.html"><span class="en">🏠 Home</span><span class="ne">🏠 गृहपृष्ठ</span></a>
+    <a href="../step2-pathways/index.html"><span class="en">🗺 Pathways</span><span class="ne">🗺 मार्गहरू</span></a>
+    <a href="../step3-institutions/index.html"><span class="en">🏫 Institutions</span><span class="ne">🏫 संस्थाहरू</span></a>
+    <a href="../step4-scholarships/index.html"><span class="en">💰 Scholarships</span><span class="ne">💰 छात्रवृत्ति</span></a>
+    <a href="../step5-gpa-tool/index.html"><span class="en">🎯 GPA Tool</span><span class="ne">🎯 GPA टूल</span></a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" id="pageTop">
+  <div class="hero-stripe"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb">
+      <a href="../step1-home/index.html">Home</a><span>›</span>
+      <span style="color:rgba(255,255,255,.55)" class="en">Pathways</span>
+      <span style="color:rgba(255,255,255,.55)" class="ne">मार्गहरू</span>
+    </div>
+    <div class="sec-kicker reveal"><span class="en">Academic Pathways — After SEE</span><span class="ne">शैक्षिक मार्गहरू — SEE पछि</span></div>
+    <h1 class="reveal d1">
+      <span class="en">Choose Your Path.<br><span class="accent">Your Future Awaits.</span></span>
+      <span class="ne">आफ्नो मार्ग छान्नुहोस्।<br><span class="accent">भविष्य तपाईंको पर्खिरहेको छ।</span></span>
+    </h1>
+    <p class="sub reveal d2 en">Four pathways — Science, Management, Law & Humanities, and CTEVT. Full subjects, step-by-step roadmaps, top colleges, and scholarships in one place.</p>
+    <p class="sub reveal d2 ne">चार मार्गहरू — विज्ञान, व्यवस्थापन, कानून र CTEVT। विषय, रोडम्याप, कलेज र छात्रवृत्ति एकैठाउँमा।</p>
+
+    <div class="tabs-bar">
+      <button class="tab-btn active" id="tab-science" onclick="switchTab('science')">
+        <span class="t-icon">🔬</span><span class="en">Science</span><span class="ne">विज्ञान</span>
+        <span class="tab-badge en">GPA 2.0+</span><span class="tab-badge ne">GPA २.०+</span>
+      </button>
+      <button class="tab-btn" id="tab-mgmt" onclick="switchTab('mgmt')">
+        <span class="t-icon">📊</span><span class="en">Management</span><span class="ne">व्यवस्थापन</span>
+        <span class="tab-badge en">GPA 1.6+</span><span class="tab-badge ne">GPA १.६+</span>
+      </button>
+      <button class="tab-btn" id="tab-law" onclick="switchTab('law')">
+        <span class="t-icon">⚖️</span><span class="en">Law & Humanities</span><span class="ne">कानून</span>
+        <span class="tab-badge en">GPA 1.6+</span><span class="tab-badge ne">GPA १.६+</span>
+      </button>
+      <button class="tab-btn" id="tab-ctevt" onclick="switchTab('ctevt')">
+        <span class="t-icon">🔧</span><span class="en">CTEVT Technical</span><span class="ne">CTEVT</span>
+        <span class="tab-badge en">SEE Pass</span><span class="tab-badge ne">SEE पास</span>
+      </button>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════════════════ PANELS ═══════════════════ -->
+<div class="panels-wrap">
+
+<!-- ╔══════════════════╗
+     ║   SCIENCE        ║
+     ╚══════════════════╝ -->
+<div class="panel active" id="panel-science">
+
+  <div class="ov-row">
+    <div class="ov-card reveal"><div class="ov-icon">📋</div><div><div class="ov-label en">Min GPA</div><div class="ov-label ne">न्यूनतम GPA</div><div class="ov-value">2.0 / 4.0</div></div></div>
+    <div class="ov-card reveal d1"><div class="ov-icon">⏳</div><div><div class="ov-label en">+2 Duration</div><div class="ov-label ne">अवधि</div><div class="ov-value en">2 Years</div><div class="ov-value ne">२ वर्ष</div></div></div>
+    <div class="ov-card reveal d2"><div class="ov-icon">🏛️</div><div><div class="ov-label en">Board</div><div class="ov-label ne">बोर्ड</div><div class="ov-value">NEB Nepal</div></div></div>
+    <div class="ov-card reveal d3"><div class="ov-icon">🌟</div><div><div class="ov-label en">Top Careers</div><div class="ov-label ne">शीर्ष क्यारियर</div><div class="ov-value en">Doctor · Engineer</div><div class="ov-value ne">डाक्टर · इन्जिनियर</div></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Subjects</span><span class="ne">विषयहरू</span></div>
+  <div class="subj-grid reveal">
+    <div class="subj-card">
+      <h3>📌 <span class="en">Compulsory Subjects</span><span class="ne">अनिवार्य विषयहरू</span></h3>
+      <div class="tags-wrap">
+        <span class="stag"><span class="dot" style="background:#16a34a"></span>English</span>
+        <span class="stag"><span class="dot" style="background:#16a34a"></span><span class="en">Nepali</span><span class="ne">नेपाली</span></span>
+        <span class="stag"><span class="dot" style="background:#16a34a"></span><span class="en">Social Studies</span><span class="ne">सामाजिक</span></span>
+      </div>
+    </div>
+    <div class="subj-card">
+      <h3>⚡ <span class="en">Electives — Pick 3</span><span class="ne">वैकल्पिक — ३ छान्नुहोस्</span></h3>
+      <div class="tags-wrap">
+        <span class="stag"><span class="dot" style="background:#3b82f6"></span>Physics</span>
+        <span class="stag"><span class="dot" style="background:#ef4444"></span>Chemistry</span>
+        <span class="stag"><span class="dot" style="background:#22c55e"></span>Biology</span>
+        <span class="stag"><span class="dot" style="background:#f59e0b"></span>Mathematics</span>
+        <span class="stag"><span class="dot" style="background:#a855f7"></span><span class="en">Computer Science</span><span class="ne">कम्प्युटर</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Roadmap</span><span class="ne">क्यारियर रोडम्याप</span></div>
+  <div class="roadmap reveal">
+    <h3 class="en">Your Journey — <span style="color:var(--gold)">Science Group</span></h3>
+    <h3 class="ne">तपाईंको यात्रा — <span style="color:var(--gold)">विज्ञान समूह</span></h3>
+    <div class="rm-track">
+      <div class="rm-step"><div class="rm-node">🎓</div><div class="rm-body"><h4 class="en">SEE (Grade 10) Completed</h4><h4 class="ne">SEE उत्तीर्ण</h4><p class="en">Minimum GPA 2.0 required. Strong C+ or above in Science & Math is recommended.</p><p class="ne">न्यूनतम GPA २.०। विज्ञान र गणितमा C+ वा माथि सिफारिश।</p><div class="rm-pills"><span class="rm-pill en">GPA 2.0+ Required</span><span class="rm-pill ne">GPA २.०+ आवश्यक</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">📗</div><div class="rm-body"><h4 class="en">+2 Science — Grades 11 & 12</h4><h4 class="ne">+२ विज्ञान — कक्षा ११–१२</h4><p class="en">2 years under NEB. PCB for Medical or PCM for Engineering/IT track.</p><p class="ne">NEB अन्तर्गत २ वर्ष। PCB (मेडिकल) वा PCM (इन्जिनियरिङ/IT)।</p><div class="rm-pills"><span class="rm-pill">PCB — Medical</span><span class="rm-pill">PCM — Engineering</span><span class="rm-pill">PCM+CS — IT</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">🏆</div><div class="rm-body"><h4 class="en">Entrance Exams</h4><h4 class="ne">प्रवेश परीक्षाहरू</h4><p class="en">Sit for IOEPC (Engineering), MECEE (Medical), or TUIOST (IT) to qualify.</p><p class="ne">IOEPC, MECEE वा TUIOST।</p><div class="rm-pills"><span class="rm-pill">IOEPC</span><span class="rm-pill">MECEE</span><span class="rm-pill">TUIOST</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">🎯</div><div class="rm-body"><h4 class="en">Bachelor's Degree — 4 to 5 Years</h4><h4 class="ne">स्नातक — ४–५ वर्ष</h4><p class="en">MBBS, BDS, B.E., B.Sc. CSIT, or B.Sc. Agriculture based on entrance result.</p><p class="ne">MBBS, BDS, B.E., B.Sc. CSIT वा B.Sc. Agriculture।</p><div class="rm-pills"><span class="rm-pill">MBBS</span><span class="rm-pill">B.E. Civil</span><span class="rm-pill">B.Sc. CSIT</span><span class="rm-pill">BDS</span><span class="rm-pill">B.Sc. Agri</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">💼</div><div class="rm-body"><h4 class="en">Career & Employment</h4><h4 class="ne">क्यारियर र रोजगारी</h4><p class="en">Hospitals, engineering firms, IT companies, research institutes, or government service.</p><p class="ne">अस्पताल, इन्जिनियरिङ, IT वा निजामती सेवा।</p><div class="rm-pills en"><span class="rm-pill">Doctor</span><span class="rm-pill">Engineer</span><span class="rm-pill">Software Dev</span><span class="rm-pill">Scientist</span></div><div class="rm-pills ne"><span class="rm-pill">डाक्टर</span><span class="rm-pill">इन्जिनियर</span><span class="rm-pill">सफ्टवेयर</span></div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Options</span><span class="ne">क्यारियर विकल्पहरू</span></div>
+  <div class="career-grid reveal">
+    <div class="cc">
+      <div class="cc-icon-box">🩺</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Doctor (MBBS)</span><span class="cc-title ne">डाक्टर (MBBS)</span><span class="cc-badge b-green">⚡ High Demand</span></div>
+        <p class="cc-desc en">5.5 years. PCB at +2 and MECEE entrance required. Most respected career in Nepal.</p>
+        <p class="cc-desc ne">५.५ वर्ष। PCB र MECEE परीक्षा। नेपालको सर्वाधिक सम्मानित पेशा।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 MBBS</span><span class="cc-chip">⏱ 5.5 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🏗️</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Civil Engineer (B.E.)</span><span class="cc-title ne">सिभिल इन्जिनियर</span><span class="cc-badge b-green">⚡ High Demand</span></div>
+        <p class="cc-desc en">4 years. PCM at +2 and IOE entrance required. Huge demand in Nepal's infrastructure boom.</p>
+        <p class="cc-desc ne">४ वर्ष। PCM र IOE परीक्षा। पूर्वाधार निर्माणमा माग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 B.E. Civil</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">💻</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Software Engineer</span><span class="cc-title ne">सफ्टवेयर इन्जिनियर</span><span class="cc-badge b-sky">🚀 Fast Growing</span></div>
+        <p class="cc-desc en">B.Sc. CSIT or B.E. Computer. Nepal's IT sector is booming — remote work opens global opportunities.</p>
+        <p class="cc-desc ne">B.Sc. CSIT। नेपालको IT क्षेत्र तीव्र गतिमा बढ्दैछ।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 B.Sc. CSIT / B.E.</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🌾</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Agriculture Scientist</span><span class="cc-title ne">कृषि वैज्ञानिक</span><span class="cc-badge b-gold">🏛️ Govt Jobs</span></div>
+        <p class="cc-desc en">B.Sc. Agriculture (4 yrs). Excellent government job prospects in Nepal's agricultural programs.</p>
+        <p class="cc-desc ne">B.Sc. कृषि। सरकारी कृषि कार्यक्रममा राम्रो भविष्य।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 B.Sc. Agri</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🔬</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Research Scientist</span><span class="cc-title ne">अनुसन्धानकर्ता</span><span class="cc-badge b-purple">🔭 Research/NGO</span></div>
+        <p class="cc-desc en">B.Sc. Chemistry, Physics, or Biology. Pathway to M.Sc. and PhD. NGO and research roles.</p>
+        <p class="cc-desc ne">B.Sc. रसायन/भौतिक/जीव। M.Sc. र PhD सम्म।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 B.Sc.</span><span class="cc-chip">⏱ 3–4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🦷</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Dentist (BDS)</span><span class="cc-title ne">दन्त चिकित्सक</span><span class="cc-badge b-green">⚡ High Demand</span></div>
+        <p class="cc-desc en">5 years. PCB and medical entrance exam required. Growing demand for dental care across Nepal.</p>
+        <p class="cc-desc ne">५ वर्ष। PCB र मेडिकल परीक्षा। नेपालभर माग बढ्दो।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BDS</span><span class="cc-chip">⏱ 5 yrs</span></div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Top Institutions</span><span class="ne">शीर्ष संस्थाहरू</span></div>
+  <div class="table-wrap reveal">
+    <div class="table-head">
+      <h3 class="en">Verified Institutions — Science</h3><h3 class="ne">प्रमाणित संस्थाहरू — विज्ञान</h3>
+      <div class="prov-filters">
+        <button class="pf active" onclick="filterCol('science','all',this)"><span class="en">All</span><span class="ne">सबै</span></button>
+        <button class="pf" onclick="filterCol('science','bagmati',this)">Bagmati</button>
+        <button class="pf" onclick="filterCol('science','gandaki',this)">Gandaki</button>
+        <button class="pf" onclick="filterCol('science','lumbini',this)">Lumbini</button>
+        <button class="pf" onclick="filterCol('science','p1',this)">Province 1</button>
+      </div>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="college-table"><thead><tr>
+        <th class="en">Institution</th><th class="ne">संस्था</th>
+        <th class="en">Location</th><th class="ne">स्थान</th>
+        <th class="en">Programs</th><th class="ne">कार्यक्रम</th>
+        <th>✅</th>
+      </tr></thead><tbody id="science-tbody"></tbody></table>
+    </div>
+  </div>
+
+  <div class="schol-callout reveal">
+    <div><h3 class="en">💰 Scholarships for Science Students</h3><h3 class="ne">💰 विज्ञान विद्यार्थीका लागि छात्रवृत्ति</h3>
+    <p class="en">Municipal quota and college merit scholarships available for community school students. Apply right after SEE results.</p>
+    <p class="ne">नगरपालिका कोटा र कलेज मेरिट छात्रवृत्ति। SEE नतिजा पछि आवेदन दिनुहोस्।</p></div>
+    <button class="btn-gold"><span class="en">View Scholarships →</span><span class="ne">छात्रवृत्ति →</span></button>
+  </div>
+  <div class="pdf-strip reveal">
+    <div class="pdf-left"><div class="pdf-icon-box">📄</div><div>
+      <h4 class="en">Download Science Pathway Guide</h4><h4 class="ne">विज्ञान मार्ग गाइड डाउनलोड</h4>
+      <p class="en">Subjects, programs, entrance exams & scholarship checklist — free PDF</p>
+      <p class="ne">एक पेज PDF — विषय, कार्यक्रम, प्रवेश परीक्षा, छात्रवृत्ति</p>
+    </div></div>
+    <button class="btn-primary" onclick="alert('PDF download coming in Step 5!')">📥 <span class="en">Download Free PDF</span><span class="ne">निःशुल्क PDF</span></button>
+  </div>
+</div><!-- /science -->
+
+
+<!-- ╔══════════════════╗
+     ║   MANAGEMENT     ║
+     ╚══════════════════╝ -->
+<div class="panel" id="panel-mgmt">
+
+  <div class="ov-row">
+    <div class="ov-card reveal"><div class="ov-icon">📋</div><div><div class="ov-label en">Min GPA</div><div class="ov-label ne">न्यूनतम GPA</div><div class="ov-value">1.6 / 4.0</div></div></div>
+    <div class="ov-card reveal d1"><div class="ov-icon">⏳</div><div><div class="ov-label en">+2 Duration</div><div class="ov-label ne">अवधि</div><div class="ov-value en">2 Years</div><div class="ov-value ne">२ वर्ष</div></div></div>
+    <div class="ov-card reveal d2"><div class="ov-icon">🏛️</div><div><div class="ov-label en">Board</div><div class="ov-label ne">बोर्ड</div><div class="ov-value">NEB Nepal</div></div></div>
+    <div class="ov-card reveal d3"><div class="ov-icon">🌟</div><div><div class="ov-label en">Top Careers</div><div class="ov-label ne">शीर्ष क्यारियर</div><div class="ov-value en">Banker · Manager</div><div class="ov-value ne">बैंकर · म्यानेजर</div></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Subjects</span><span class="ne">विषयहरू</span></div>
+  <div class="subj-grid reveal">
+    <div class="subj-card"><h3>📌 <span class="en">Compulsory</span><span class="ne">अनिवार्य</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#0ea5e9"></span>English</span><span class="stag"><span class="dot" style="background:#0ea5e9"></span><span class="en">Nepali</span><span class="ne">नेपाली</span></span><span class="stag"><span class="dot" style="background:#0ea5e9"></span><span class="en">Social Studies</span><span class="ne">सामाजिक</span></span></div></div>
+    <div class="subj-card"><h3>⚡ <span class="en">Electives — Pick 3</span><span class="ne">वैकल्पिक — ३ छान्नुहोस्</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#0ea5e9"></span>Accountancy</span><span class="stag"><span class="dot" style="background:#22c55e"></span>Economics</span><span class="stag"><span class="dot" style="background:#f59e0b"></span><span class="en">Business Studies</span><span class="ne">व्यापार</span></span><span class="stag"><span class="dot" style="background:#a855f7"></span><span class="en">Computer Science</span><span class="ne">कम्प्युटर</span></span><span class="stag"><span class="dot" style="background:#ef4444"></span><span class="en">Hotel Management</span><span class="ne">होटल</span></span></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Roadmap</span><span class="ne">रोडम्याप</span></div>
+  <div class="roadmap reveal">
+    <h3 class="en">Your Journey — <span style="color:var(--gold)">Management Group</span></h3><h3 class="ne">तपाईंको यात्रा — <span style="color:var(--gold)">व्यवस्थापन समूह</span></h3>
+    <div class="rm-track">
+      <div class="rm-step"><div class="rm-node">🎓</div><div class="rm-body"><h4 class="en">SEE Completed — GPA 1.6+</h4><h4 class="ne">SEE उत्तीर्ण — GPA १.६+</h4><p class="en">One of the most inclusive NEB pathways. GPA 1.6 or above is all you need.</p><p class="ne">GPA १.६ वा माथि। NEB को समावेशी मार्ग।</p></div></div>
+      <div class="rm-step"><div class="rm-node">📗</div><div class="rm-body"><h4 class="en">+2 Management — Grades 11 & 12</h4><h4 class="ne">+२ व्यवस्थापन</h4><p class="en">Accountancy, Economics, Business Studies. Add Computer or Hotel Management as elective.</p><p class="ne">लेखा, अर्थशास्त्र र व्यापार। कम्प्युटर वा होटल वैकल्पिक।</p><div class="rm-pills"><span class="rm-pill">Accountancy</span><span class="rm-pill">Economics</span><span class="rm-pill">Business Studies</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">🏆</div><div class="rm-body"><h4 class="en">Apply to Bachelor Programs</h4><h4 class="ne">स्नातकमा आवेदन</h4><p class="en">Most management colleges accept based on +2 grades directly. Some have a short entrance test.</p><p class="ne">धेरै कलेज +2 ग्रेडकै आधारमा भर्ना गर्छन्।</p></div></div>
+      <div class="rm-step"><div class="rm-node">🎯</div><div class="rm-body"><h4 class="en">Bachelor's Degree — 4 Years</h4><h4 class="ne">स्नातक — ४ वर्ष</h4><p class="en">BBA, BBS, BIM (IT+Mgmt), BHM (Hotel), or B.Sc. Economics.</p><p class="ne">BBA, BBS, BIM, BHM वा अर्थशास्त्र।</p><div class="rm-pills"><span class="rm-pill">BBA</span><span class="rm-pill">BBS</span><span class="rm-pill">BIM</span><span class="rm-pill">BHM</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">💼</div><div class="rm-body"><h4 class="en">Career & Employment</h4><h4 class="ne">क्यारियर</h4><p class="en">Banks, hotels, IT firms, government offices, or entrepreneurship.</p><p class="ne">बैंक, होटल, IT, सरकारी कार्यालय वा उद्यमशीलता।</p><div class="rm-pills en"><span class="rm-pill">Banker</span><span class="rm-pill">Accountant</span><span class="rm-pill">Hotel Manager</span><span class="rm-pill">Entrepreneur</span></div><div class="rm-pills ne"><span class="rm-pill">बैंकर</span><span class="rm-pill">लेखापाल</span><span class="rm-pill">होटल मैनेजर</span></div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Options</span><span class="ne">क्यारियर विकल्पहरू</span></div>
+  <div class="career-grid reveal">
+    <div class="cc">
+      <div class="cc-icon-box">🏦</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Banker</span><span class="cc-title ne">बैंकर</span><span class="cc-badge b-green">💼 Stable Income</span></div>
+        <p class="cc-desc en">BBS or BBA. Nepal has 20+ commercial banks actively hiring graduates every year.</p>
+        <p class="cc-desc ne">BBS वा BBA। नेपालमा २०+ वाणिज्य बैंक। प्रत्येक वर्ष भर्ना।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BBS / BBA</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🏨</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Hotel Manager</span><span class="cc-title ne">होटल म्यानेजर</span><span class="cc-badge b-sky">✈️ Tourism Growth</span></div>
+        <p class="cc-desc en">BHM. Nepal's thriving tourism sector creates consistent demand for hospitality professionals.</p>
+        <p class="cc-desc ne">BHM। नेपालको पर्यटन उद्योगले सतत माग सिर्जना गर्छ।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BHM</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">💻</div>
+      
+        <div class="cc-row1"><span class="cc-title en">IT Manager (BIM)</span><span class="cc-title ne">IT म्यानेजर</span><span class="cc-badge b-sky">🚀 Fast Growing</span></div>
+        <p class="cc-desc en">BIM blends IT and Management — ideal for tech-business hybrid roles. Growing demand in Nepal's IT hub.</p>
+        <p class="cc-desc ne">BIM IT र व्यवस्थापन मिलाउँछ। काठमाडौँको IT मा माग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BIM</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">📊</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Accountant / CA</span><span class="cc-title ne">लेखापाल / CA</span><span class="cc-badge b-green">⚡ High Demand</span></div>
+        <p class="cc-desc en">BBS or BBA. Add CA qualification for senior accounting and audit roles in Nepal's banking sector.</p>
+        <p class="cc-desc ne">BBS वा BBA। CA थपेर उच्च पद। बैंकिङ क्षेत्रमा माग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BBS + CA</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🚀</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Entrepreneur</span><span class="cc-title ne">उद्यमी</span><span class="cc-badge b-gold">🌟 Self-Employed</span></div>
+        <p class="cc-desc en">BBA gives the business fundamentals to launch your own venture. Nepal's startup ecosystem is rising.</p>
+        <p class="cc-desc ne">BBA ले उद्यम सुरु गर्न आधार दिन्छ। नेपालको startup बढ्दैछ।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BBA</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">📈</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Economist</span><span class="cc-title ne">अर्थशास्त्री</span><span class="cc-badge b-purple">🏛️ Govt/Research</span></div>
+        <p class="cc-desc en">B.Sc. Economics or BBS. Government planning, NRB, international organisations or research institutes.</p>
+        <p class="cc-desc ne">अर्थशास्त्र। सरकारी योजना, NRB वा अन्तर्राष्ट्रिय संस्था।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BBS / B.Sc. Econ</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+  </div>
+
+  <div class="schol-callout reveal"><div><h3 class="en">💰 Management Scholarships</h3><h3 class="ne">💰 व्यवस्थापन छात्रवृत्ति</h3><p class="en">Municipal scholarships and merit seats for community school students with GPA 1.6+. Apply after SEE results.</p><p class="ne">GPA १.६+ सरकारी विद्यालयका विद्यार्थी प्राथमिकतामा।</p></div><button class="btn-gold"><span class="en">View Scholarships →</span><span class="ne">छात्रवृत्ति →</span></button></div>
+  <div class="pdf-strip reveal"><div class="pdf-left"><div class="pdf-icon-box">📄</div><div><h4 class="en">Download Management Guide</h4><h4 class="ne">व्यवस्थापन गाइड डाउनलोड</h4><p class="en">Full subjects, programs & scholarship checklist — free PDF</p><p class="ne">PDF — विषय, कार्यक्रम र छात्रवृत्ति</p></div></div><button class="btn-primary" onclick="alert('PDF coming in Step 5!')">📥 <span class="en">Download Free PDF</span><span class="ne">निःशुल्क PDF</span></button></div>
+</div><!-- /mgmt -->
+
+
+<!-- ╔══════════════════╗
+     ║   LAW            ║
+     ╚══════════════════╝ -->
+<div class="panel" id="panel-law">
+
+  <div class="ov-row">
+    <div class="ov-card reveal"><div class="ov-icon">📋</div><div><div class="ov-label en">Min GPA</div><div class="ov-label ne">न्यूनतम GPA</div><div class="ov-value">1.6 / 4.0</div></div></div>
+    <div class="ov-card reveal d1"><div class="ov-icon">⏳</div><div><div class="ov-label en">+2 Duration</div><div class="ov-label ne">अवधि</div><div class="ov-value en">2 Years</div><div class="ov-value ne">२ वर्ष</div></div></div>
+    <div class="ov-card reveal d2"><div class="ov-icon">🏛️</div><div><div class="ov-label en">Board</div><div class="ov-label ne">बोर्ड</div><div class="ov-value">NEB Nepal</div></div></div>
+    <div class="ov-card reveal d3"><div class="ov-icon">🌟</div><div><div class="ov-label en">Top Careers</div><div class="ov-label ne">शीर्ष क्यारियर</div><div class="ov-value en">Lawyer · Journalist</div><div class="ov-value ne">वकिल · पत्रकार</div></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Subjects</span><span class="ne">विषयहरू</span></div>
+  <div class="subj-grid reveal">
+    <div class="subj-card"><h3>📌 <span class="en">Compulsory</span><span class="ne">अनिवार्य</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#8b5cf6"></span>English</span><span class="stag"><span class="dot" style="background:#8b5cf6"></span><span class="en">Nepali</span><span class="ne">नेपाली</span></span><span class="stag"><span class="dot" style="background:#8b5cf6"></span><span class="en">Social Studies</span><span class="ne">सामाजिक</span></span></div></div>
+    <div class="subj-card"><h3>⚡ <span class="en">Electives</span><span class="ne">वैकल्पिक</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#8b5cf6"></span><span class="en">Legal Studies</span><span class="ne">कानूनी अध्ययन</span></span><span class="stag"><span class="dot" style="background:#a855f7"></span>Sociology</span><span class="stag"><span class="dot" style="background:#ef4444"></span>Psychology</span><span class="stag"><span class="dot" style="background:#3b82f6"></span>Journalism</span><span class="stag"><span class="dot" style="background:#22c55e"></span><span class="en">Political Science</span><span class="ne">राजनीति</span></span></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Roadmap</span><span class="ne">रोडम्याप</span></div>
+  <div class="roadmap reveal">
+    <h3 class="en">Your Journey — <span style="color:var(--gold)">Law & Humanities</span></h3><h3 class="ne">तपाईंको यात्रा — <span style="color:var(--gold)">कानून र मानविकी</span></h3>
+    <div class="rm-track">
+      <div class="rm-step"><div class="rm-node">🎓</div><div class="rm-body"><h4 class="en">SEE Completed — GPA 1.6+</h4><h4 class="ne">SEE उत्तीर्ण — GPA १.६+</h4><p class="en">Open to students with GPA 1.6 or above. Broadest pathway in Nepal's NEB system.</p><p class="ne">GPA १.६ वा माथि। NEB को व्यापक मार्ग।</p></div></div>
+      <div class="rm-step"><div class="rm-node">📗</div><div class="rm-body"><h4 class="en">+2 Humanities — Grades 11 & 12</h4><h4 class="ne">+२ मानविकी</h4><p class="en">Choose Legal Studies, Journalism, Sociology, or Political Science alongside core subjects.</p><p class="ne">कानूनी अध्ययन, पत्रकारिता, समाजशास्त्र वा राजनीति।</p></div></div>
+      <div class="rm-step"><div class="rm-node">🏆</div><div class="rm-body"><h4 class="en">Apply to BA LLB or BA Programs</h4><h4 class="ne">BA LLB वा BA</h4><p class="en">5-year integrated BA LLB at law campuses. Journalism and social work have direct admission.</p><p class="ne">५ वर्षे BA LLB। पत्रकारिता सिधै भर्ना।</p><div class="rm-pills"><span class="rm-pill">BA LLB</span><span class="rm-pill">BA Journalism</span><span class="rm-pill">BSW</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">💼</div><div class="rm-body"><h4 class="en">Career & Employment</h4><h4 class="ne">क्यारियर</h4><div class="rm-pills en"><span class="rm-pill">Lawyer</span><span class="rm-pill">Journalist</span><span class="rm-pill">Social Worker</span><span class="rm-pill">Civil Servant</span></div><div class="rm-pills ne"><span class="rm-pill">वकिल</span><span class="rm-pill">पत्रकार</span><span class="rm-pill">समाजसेवी</span></div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Options</span><span class="ne">क्यारियर विकल्पहरू</span></div>
+  <div class="career-grid reveal">
+    <div class="cc">
+      <div class="cc-icon-box">⚖️</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Lawyer</span><span class="cc-title ne">वकिल</span><span class="cc-badge b-purple">⚖️ Respected Career</span></div>
+        <p class="cc-desc en">BA LLB (5 years). Practice at district or high courts after passing the bar exam.</p>
+        <p class="cc-desc ne">BA LLB (५ वर्ष)। बार परीक्षा पछि अदालतमा प्रैक्टिस।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BA LLB</span><span class="cc-chip">⏱ 5 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">📰</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Journalist</span><span class="cc-title ne">पत्रकार</span><span class="cc-badge b-sky">📡 Media Sector</span></div>
+        <p class="cc-desc en">BA Journalism & Mass Communication. TV, print, and digital media career opportunities.</p>
+        <p class="cc-desc ne">BA पत्रकारिता। टिभी, प्रिन्ट र डिजिटल मिडिया।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BA Journalism</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🤝</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Social Worker</span><span class="cc-title ne">समाजसेवी</span><span class="cc-badge b-green">🌐 NGO / UN</span></div>
+        <p class="cc-desc en">BSW (Bachelor of Social Work). Work with NGOs, UN agencies, and government programs.</p>
+        <p class="cc-desc ne">BSW। NGO, UN र सरकारी कार्यक्रम।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BSW</span><span class="cc-chip">⏱ 3 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🏛️</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Civil Servant</span><span class="cc-title ne">निजामती कर्मचारी</span><span class="cc-badge b-gold">🏛️ Govt / Stable</span></div>
+        <p class="cc-desc en">BA + Loksewa preparation. Reach officer-level government positions across Nepal.</p>
+        <p class="cc-desc ne">BA + लोकसेवा। नेपालभर अधिकृत स्तरको सरकारी पद।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BA</span><span class="cc-chip">⏱ 3 yrs + Loksewa</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🎓</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Teacher / Lecturer</span><span class="cc-title ne">शिक्षक / प्राध्यापक</span><span class="cc-badge b-green">📚 Education</span></div>
+        <p class="cc-desc en">BA + B.Ed. Teach social sciences at school or college level across Nepal.</p>
+        <p class="cc-desc ne">BA + B.Ed। विद्यालय वा कलेजमा पढाउने।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BA + B.Ed</span><span class="cc-chip">⏱ 4 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🧠</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Psychologist</span><span class="cc-title ne">मनोवैज्ञानिक</span><span class="cc-badge b-sky">📈 Growing Field</span></div>
+        <p class="cc-desc en">BA Psychology + M.Sc. Rapidly growing demand for counseling and mental health services in Nepal.</p>
+        <p class="cc-desc ne">BA मनोविज्ञान। परामर्श र मानसिक स्वास्थ्यमा माग बढ्दो।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 BA Psychology</span><span class="cc-chip">⏱ 3–4 yrs</span></div>
+    </div>
+  </div>
+
+  <div class="schol-callout reveal"><div><h3 class="en">💰 Humanities Scholarships</h3><h3 class="ne">💰 मानविकी छात्रवृत्ति</h3><p class="en">College merit seats and municipal scholarships for Law & Humanities students from community schools.</p><p class="ne">सरकारी विद्यालयका विद्यार्थीका लागि मेरिट सिट उपलब्ध।</p></div><button class="btn-gold"><span class="en">View Scholarships →</span><span class="ne">छात्रवृत्ति →</span></button></div>
+  <div class="pdf-strip reveal"><div class="pdf-left"><div class="pdf-icon-box">📄</div><div><h4 class="en">Download Law & Humanities Guide</h4><h4 class="ne">कानून गाइड डाउनलोड</h4><p class="en">Full roadmap with programs & scholarship checklist</p><p class="ne">रोडम्याप र छात्रवृत्ति PDF</p></div></div><button class="btn-primary" onclick="alert('PDF coming in Step 5!')">📥 <span class="en">Download Free PDF</span><span class="ne">निःशुल्क PDF</span></button></div>
+</div><!-- /law -->
+
+
+<!-- ╔══════════════════╗
+     ║   CTEVT          ║
+     ╚══════════════════╝ -->
+<div class="panel" id="panel-ctevt">
+
+  <div class="ov-row">
+    <div class="ov-card reveal"><div class="ov-icon">📋</div><div><div class="ov-label en">Requirement</div><div class="ov-label ne">आवश्यकता</div><div class="ov-value en">SEE Pass</div><div class="ov-value ne">SEE पास</div></div></div>
+    <div class="ov-card reveal d1"><div class="ov-icon">⏳</div><div><div class="ov-label en">Duration</div><div class="ov-label ne">अवधि</div><div class="ov-value en">1.5 – 3 Years</div><div class="ov-value ne">१.५–३ वर्ष</div></div></div>
+    <div class="ov-card reveal d2"><div class="ov-icon">🏛️</div><div><div class="ov-label en">Board</div><div class="ov-label ne">बोर्ड</div><div class="ov-value">CTEVT Nepal</div></div></div>
+    <div class="ov-card reveal d3"><div class="ov-icon">⚡</div><div><div class="ov-label en">Key Benefit</div><div class="ov-label ne">मुख्य फाइदा</div><div class="ov-value en">Quick Employment</div><div class="ov-value ne">छिटो रोजगारी</div></div></div>
+  </div>
+
+  <div class="info-box reveal">
+    <strong class="en">💡 Why CTEVT? The most inclusive pathway in Nepal.</strong>
+    <strong class="ne">💡 CTEVT किन? नेपालको सबैभन्दा समावेशी मार्ग।</strong>
+    <p class="en">Only SEE pass required — <strong>any GPA</strong>. Shorter, hands-on, leads directly to employment. CTEVT reserves <strong>scholarship seats</strong> for Dalit, Janajati, disabled, and remote-area students.</p>
+    <p class="ne">केवल SEE पास। <strong>जुनसुकै GPA।</strong> CTEVT ले दलित, जनजाति, अपाङ्ग र दुर्गम विद्यार्थीका लागि <strong>विशेष सिट</strong> आरक्षित गर्छ।</p>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Program Types</span><span class="ne">कार्यक्रम प्रकार</span></div>
+  <div class="subj-grid reveal">
+    <div class="subj-card"><h3>⏱️ <span class="en">TSLC — 18 Months</span><span class="ne">TSLC — १८ महिना</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#e8a020"></span><span class="en">CMA (Community Medical)</span><span class="ne">CMA</span></span><span class="stag"><span class="dot" style="background:#e8a020"></span>Lab Technician</span><span class="stag"><span class="dot" style="background:#e8a020"></span>Electrician</span><span class="stag"><span class="dot" style="background:#e8a020"></span>Construction</span><span class="stag"><span class="dot" style="background:#e8a020"></span>Plumbing</span></div></div>
+    <div class="subj-card"><h3>🎓 <span class="en">Diploma — 2 to 3 Years</span><span class="ne">डिप्लोमा — २–३ वर्ष</span></h3><div class="tags-wrap"><span class="stag"><span class="dot" style="background:#16a34a"></span>Civil Engineering</span><span class="stag"><span class="dot" style="background:#0ea5e9"></span>Computer Engineering</span><span class="stag"><span class="dot" style="background:#ef4444"></span>Mechanical</span><span class="stag"><span class="dot" style="background:#a855f7"></span>Electrical</span><span class="stag"><span class="dot" style="background:#22c55e"></span>Agriculture</span><span class="stag"><span class="dot" style="background:#f59e0b"></span><span class="en">Nursing / Allied Health</span><span class="ne">नर्सिङ</span></span><span class="stag"><span class="dot" style="background:#c0272d"></span><span class="en">Hotel Management</span><span class="ne">होटल</span></span></div></div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Roadmap</span><span class="ne">रोडम्याप</span></div>
+  <div class="roadmap reveal">
+    <h3 class="en">Your Journey — <span style="color:var(--gold)">CTEVT Technical</span></h3><h3 class="ne">तपाईंको यात्रा — <span style="color:var(--gold)">CTEVT प्राविधिक</span></h3>
+    <div class="rm-track">
+      <div class="rm-step"><div class="rm-node">🎓</div><div class="rm-body"><h4 class="en">SEE Pass — Any GPA</h4><h4 class="ne">SEE पास — जुनसुकै GPA</h4><p class="en">Most accessible pathway in Nepal — no minimum GPA. Only SEE pass certificate needed.</p><p class="ne">नेपालको सबैभन्दा सुलभ मार्ग। SEE पास मात्र चाहिन्छ।</p></div></div>
+      <div class="rm-step"><div class="rm-node">🔧</div><div class="rm-body"><h4 class="en">Choose TSLC or Diploma</h4><h4 class="ne">TSLC वा डिप्लोमा छान्नुहोस्</h4><p class="en">TSLC is 18 months, Diploma is 2–3 years. Apply at the nearest CTEVT-affiliated institute in your district.</p><p class="ne">TSLC १८ महिना, डिप्लोमा २–३ वर्ष। नजिकको CTEVT संस्थामा आवेदन।</p><div class="rm-pills"><span class="rm-pill en">Find Nearest CTEVT Institute</span><span class="rm-pill ne">नजिकको CTEVT संस्था</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">💼</div><div class="rm-body"><h4 class="en">Direct Employment</h4><h4 class="ne">सिधा रोजगारी</h4><p class="en">Most diploma holders get jobs within months — construction, hospitals, IT, hotels.</p><p class="ne">धेरैजसो डिप्लोमाधारक केही महिनाभित्र काम पाउँछन्।</p><div class="rm-pills en"><span class="rm-pill">Sub-Overseer</span><span class="rm-pill">Technician</span><span class="rm-pill">Nurse / CMA</span></div><div class="rm-pills ne"><span class="rm-pill">सब-ओभरसियर</span><span class="rm-pill">प्राविधिक</span><span class="rm-pill">नर्स</span></div></div></div>
+      <div class="rm-step"><div class="rm-node">📗</div><div class="rm-body"><h4 class="en">Optional — Bridge to B.Tech or B.E.</h4><h4 class="ne">वैकल्पिक — B.Tech / B.E.</h4><p class="en">CTEVT diploma holders can transfer credits and bridge into engineering bachelor programs.</p><p class="ne">क्रेडिट ट्रान्सफर गरेर B.Tech वा B.E. मा जान सकिन्छ।</p></div></div>
+    </div>
+  </div>
+
+  <div class="sub-kicker reveal"><span class="en">Career Options</span><span class="ne">क्यारियर विकल्पहरू</span></div>
+  <div class="career-grid reveal">
+    <div class="cc">
+      <div class="cc-icon-box">🏗️</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Civil Sub-Overseer</span><span class="cc-title ne">सिभिल सब-ओभरसियर</span><span class="cc-badge b-green">⚡ High Demand</span></div>
+        <p class="cc-desc en">Diploma in Civil Engineering. Very high demand in construction and government infrastructure projects.</p>
+        <p class="cc-desc ne">सिभिल डिप्लोमा। निर्माण र सरकारी परियोजनामा ठूलो माग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 Civil Diploma</span><span class="cc-chip">⏱ 3 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">💻</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Computer Technician</span><span class="cc-title ne">कम्प्युटर प्राविधिक</span><span class="cc-badge b-sky">💻 IT Sector</span></div>
+        <p class="cc-desc en">Diploma in Computer Engineering. Work as programmer, IT support, or network admin.</p>
+        <p class="cc-desc ne">कम्प्युटर डिप्लोमा। प्रोग्रामर, सपोर्ट वा नेटवर्क एडमिन।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 Computer Diploma</span><span class="cc-chip">⏱ 3 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">💊</div>
+      
+        <div class="cc-row1"><span class="cc-title en">CMA / Nurse</span><span class="cc-title ne">CMA / नर्स</span><span class="cc-badge b-green">🏥 Always in Demand</span></div>
+        <p class="cc-desc en">TSLC in CMA or Nursing. Work in hospitals, clinics, and health posts all across Nepal.</p>
+        <p class="cc-desc ne">CMA वा नर्सिङ TSLC। अस्पताल र स्वास्थ्य चौकी।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 CMA / Nursing TSLC</span><span class="cc-chip">⏱ 18 mo</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">⚡</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Electrician / Electrical</span><span class="cc-title ne">इलेक्ट्रिसियन</span><span class="cc-badge b-gold">🔌 Stable Work</span></div>
+        <p class="cc-desc en">TSLC or Diploma in Electrical Technology. Consistent demand in construction and industry.</p>
+        <p class="cc-desc ne">विद्युतीय TSLC वा डिप्लोमा। निर्माण र उद्योगमा माग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 Electrical Diploma</span><span class="cc-chip">⏱ 2–3 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🌾</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Agriculture Technician</span><span class="cc-title ne">कृषि प्राविधिक</span><span class="cc-badge b-gold">🏛️ Govt Jobs</span></div>
+        <p class="cc-desc en">CTEVT Agriculture diploma. Strong prospects in government agriculture extension programs.</p>
+        <p class="cc-desc ne">कृषि डिप्लोमा। सरकारी कृषि विस्तार कार्यक्रम।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 Agriculture Diploma</span><span class="cc-chip">⏱ 2–3 yrs</span></div>
+    </div>
+    <div class="cc">
+      <div class="cc-icon-box">🍽️</div>
+      
+        <div class="cc-row1"><span class="cc-title en">Hotel / Hospitality Staff</span><span class="cc-title ne">होटल कर्मचारी</span><span class="cc-badge b-sky">✈️ Tourism Sector</span></div>
+        <p class="cc-desc en">CTEVT Hotel Management diploma. Nepal's tourism sector always needs trained, certified staff.</p>
+        <p class="cc-desc ne">होटल डिप्लोमा। नेपालको पर्यटन उद्योग।</p>
+        <div class="cc-meta"><span class="cc-chip">🎓 Hotel Mgmt Diploma</span><span class="cc-chip">⏱ 2 yrs</span></div>
+    </div>
+  </div>
+
+  <div class="schol-callout reveal">
+    <div><h3 class="en">💰 CTEVT Has the Best Scholarships!</h3><h3 class="ne">💰 CTEVT मा सबैभन्दा राम्रो छात्रवृत्ति!</h3>
+    <p class="en">CTEVT reserves seats for Dalit, Janajati, disabled, and remote-area students — full or partial tuition waiver. No competitive entrance exam required.</p>
+    <p class="ne">दलित, जनजाति, अपाङ्ग र दुर्गम विद्यार्थीका लागि विशेष सिट। प्रतिस्पर्धात्मक परीक्षा छैन।</p></div>
+    <button class="btn-gold"><span class="en">View CTEVT Scholarships →</span><span class="ne">CTEVT छात्रवृत्ति →</span></button>
+  </div>
+  <div class="pdf-strip reveal"><div class="pdf-left"><div class="pdf-icon-box">📄</div><div><h4 class="en">Download CTEVT Guide</h4><h4 class="ne">CTEVT गाइड डाउनलोड</h4><p class="en">All programs, institutes, how to apply — free PDF</p><p class="ne">सबै कार्यक्रम र आवेदन विधि — निःशुल्क PDF</p></div></div><button class="btn-primary" onclick="alert('PDF coming in Step 5!')">📥 <span class="en">Download Free PDF</span><span class="ne">निःशुल्क PDF</span></button></div>
+</div><!-- /ctevt -->
+
+</div><!-- /panels-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg">
+    <div>
+      <div class="logo"><div class="logo-mark">📚</div><div class="logo-name">Pathshala <em>Guide</em></div></div>
+      <p class="ft en">Free, bilingual career guidance for SEE graduates across Nepal. Bridging the information gap for government school students.</p>
+      <p class="ft ne">नेपालका SEE उत्तीर्णहरूको लागि निःशुल्क, द्विभाषिक क्यारियर मार्गदर्शन।</p>
+      <div class="fbadge">🇳🇵 Nepal · NEB & CTEVT Verified</div>
+    </div>
+    <div class="fc">
+      <h5 class="en">Pathways</h5><h5 class="ne">मार्गहरू</h5>
+      <a href="#" onclick="switchTab('science');return false"><span class="en">🔬 Science</span><span class="ne">🔬 विज्ञान</span></a>
+      <a href="#" onclick="switchTab('mgmt');return false"><span class="en">📊 Management</span><span class="ne">📊 व्यवस्थापन</span></a>
+      <a href="#" onclick="switchTab('law');return false"><span class="en">⚖️ Law & Humanities</span><span class="ne">⚖️ कानून</span></a>
+      <a href="#" onclick="switchTab('ctevt');return false"><span class="en">🔧 CTEVT</span><span class="ne">🔧 CTEVT</span></a>
+    </div>
+    <div class="fc">
+      <h5 class="en">Resources</h5><h5 class="ne">स्रोतहरू</h5>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="#"><span class="en">Download Guides</span><span class="ne">गाइड डाउनलोड</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">Career Roadmap</span><span class="ne">क्यारियर नक्सा</span></a>
+    </div>
+    <div class="fc">
+      <h5>Official Sources</h5>
+      <a href="https://neb.ntc.net.np" target="_blank">✅ NEB Nepal</a>
+      <a href="https://www.ctevt.org.np" target="_blank">✅ CTEVT</a>
+      <a href="#"><span class="en">Municipality Portals</span><span class="ne">नगरपालिका</span></a>
+      <a href="#"><span class="en">About Pathshala</span><span class="ne">बारेमा</span></a>
+    </div>
+  </div>
+  <div class="fb">
+    <span class="en">© 2025 Pathshala Guide · Free for all students 🇳🇵</span>
+    <span class="ne">© २०२५ Pathshala Guide · सबैको लागि निःशुल्क 🇳🇵</span>
+    <span style="color:rgba(255,255,255,.2)">Verified from NEB & CTEVT official sources</span>
+  </div>
+</footer>
+  <!-- Shared JS -->
+  <script src="../shared/shared.js"></script>
+  <!-- Page JS -->
+  <script src="script.js"></script>
+</body>
+</html>

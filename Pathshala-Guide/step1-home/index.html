@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathshala Guide — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Shared design system -->
+  <link rel="stylesheet" href="../shared/shared.css">
+  <!-- step1-home page styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<div class="topbar">
+  <span class="en">🇳🇵 Free guidance for SEE graduates across all 7 provinces of Nepal — No signup required</span>
+  <span class="ne">🇳🇵 नेपालका सबै ७ प्रदेशका SEE उत्तीर्णहरूको लागि निःशुल्क मार्गदर्शन</span>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">📚</div>
+      <div class="logo-name">Pathshala <em>Guide</em></div>
+    </div>
+    <div class="nav-links">
+      <a href="../step1-home/index.html" class="active"><span class="en">Home</span><span class="ne">गृहपृष्ठ</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">Pathways</span><span class="ne">मार्गहरू</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">GPA Tool</span><span class="ne">GPA टूल</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="bEN" class="active" onclick="setLang('en')">EN</button>
+        <button id="bNE" onclick="setLang('ne')">नेपाली</button>
+      </div>
+      <button class="btn-cta en">Download Guide</button>
+      <button class="btn-cta ne">गाइड डाउनलोड</button>
+      <button class="hamburger" onclick="openNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="overlay" id="ov" onclick="closeNav(event)">
+  <div class="mob-drawer">
+    <button class="xbtn" onclick="closeNav()">✕</button>
+    <a href="../step1-home/index.html"><span class="en">🏠 Home</span><span class="ne">🏠 गृहपृष्ठ</span></a>
+    <a href="../step2-pathways/index.html"><span class="en">🗺 Pathways</span><span class="ne">🗺 मार्गहरू</span></a>
+    <a href="../step3-institutions/index.html"><span class="en">🏫 Institutions</span><span class="ne">🏫 संस्थाहरू</span></a>
+    <a href="../step4-scholarships/index.html"><span class="en">💰 Scholarships</span><span class="ne">💰 छात्रवृत्ति</span></a>
+    <a href="../step5-gpa-tool/index.html"><span class="en">🎯 GPA Tool</span><span class="ne">🎯 GPA टूल</span></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-lines">
+    <svg viewBox="0 0 600 800" fill="none" preserveAspectRatio="xMidYMid slice">
+      <circle cx="300" cy="400" r="280" stroke="white" stroke-width="0.5"/>
+      <circle cx="300" cy="400" r="200" stroke="white" stroke-width="0.5"/>
+      <circle cx="300" cy="400" r="120" stroke="white" stroke-width="0.5"/>
+      <line x1="0" y1="400" x2="600" y2="400" stroke="white" stroke-width="0.4"/>
+      <line x1="300" y1="0" x2="300" y2="800" stroke="white" stroke-width="0.4"/>
+      <line x1="0" y1="0" x2="600" y2="800" stroke="white" stroke-width="0.25"/>
+      <line x1="600" y1="0" x2="0" y2="800" stroke="white" stroke-width="0.25"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow en">For SEE graduates across Nepal</div>
+      <div class="eyebrow ne">नेपालका SEE उत्तीर्णहरूको लागि</div>
+      <h1>
+        <span class="en">Find Your Path<br><span class="accent">After SEE</span></span>
+        <span class="ne">SEE पछि आफ्नो<br><span class="accent">बाटो खोज्नुहोस्</span></span>
+      </h1>
+      <p class="hero-sub en">Confused about what to study after Grade 10? Discover every academic pathway — Science, Management, Law, CTEVT — filtered to your GPA and built for government school students.</p>
+      <p class="hero-sub ne">कक्षा १० पछि के पढ्ने भन्ने अलमल छ? तपाईंको GPA अनुसार सही मार्ग खोज्नुहोस्।</p>
+      <div class="hero-actions">
+        <a href="../step2-pathways/index.html" class="btn-primary"><span>🎯</span><span class="en">Explore Pathways</span><span class="ne">मार्गहरू हेर्नुहोस्</span></a>
+        <a href="../step4-scholarships/index.html" class="btn-ghost"><span>💰</span><span class="en">Find Scholarships</span><span class="ne">छात्रवृत्ति खोज्नुहोस्</span></a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">4<em>+</em></div><div class="stat-lbl en">Pathways</div><div class="stat-lbl ne">मार्गहरू</div></div>
+        <div><div class="stat-num">7</div><div class="stat-lbl en">Provinces</div><div class="stat-lbl ne">प्रदेशहरू</div></div>
+        <div><div class="stat-num">50<em>+</em></div><div class="stat-lbl en">Institutions</div><div class="stat-lbl ne">संस्थाहरू</div></div>
+        <div><div class="stat-num"><em>Free</em></div><div class="stat-lbl en">Always</div><div class="stat-lbl ne">सधैं</div></div>
+      </div>
+    </div>
+    <div class="gpa-card">
+      <div class="gc-tag en">Quick Eligibility Check</div>
+      <div class="gc-tag ne">छिटो योग्यता जाँच</div>
+      <h3 class="en">What's your SEE GPA?</h3>
+      <h3 class="ne">तपाईंको SEE GPA के हो?</h3>
+      <p class="en">Drag the slider — instantly see which paths are open for you.</p>
+      <p class="ne">स्लाइडर तान्नुहोस् — कुन मार्ग खुला छ तुरुन्त हेर्नुहोस्।</p>
+      <div class="gpa-big-wrap">
+        <span class="gpa-big" id="gpaBig">2.50</span><span class="gpa-of"> / 4.0</span>
+      </div>
+      <input type="range" id="gpaS" min="0" max="4" step="0.05" value="2.5" style="--pct:62.5%" oninput="onSlide(this)">
+      <div class="slider-labs"><span>0.0</span><span>1.0</span><span>2.0</span><span>3.0</span><span>4.0</span></div>
+      <div id="gpaR" class="gpa-result"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PATHWAYS -->
+<section class="section pathways-section" id="pathways">
+  <div class="container">
+    <div class="ph">
+      <div>
+        <div class="sec-kicker reveal en">Academic Pathways</div>
+        <div class="sec-kicker reveal ne">शैक्षिक मार्गहरू</div>
+        <h2 class="sec-h reveal en">Choose Your Direction<br><span>After Grade 10</span></h2>
+        <h2 class="sec-h reveal ne">कक्षा १० पछि<br><span>आफ्नो दिशा छान्नुहोस्</span></h2>
+      </div>
+      <p class="sec-p reveal en">Four main academic routes — each with distinct subjects, GPA requirements, and career destinations.</p>
+      <p class="sec-p reveal ne">चार मुख्य शैक्षिक मार्गहरू — फरक विषय, GPA र क्यारियरसहित।</p>
+    </div>
+    <div class="pgrid">
+      <div class="pc sc reveal">
+        <div class="pi">🔬</div>
+        <div class="pt en">Science Group</div><div class="pt ne">विज्ञान समूह</div>
+        <div class="pb en">Min. GPA 2.0 · High Demand</div><div class="pb ne">न्यूनतम GPA २.०</div>
+        <p class="pd en">Master Physics, Chemistry, Biology and Math to enter Nepal's most competitive fields — medicine, engineering, and technology.</p>
+        <p class="pd ne">भौतिक, रसायन, जीव विज्ञान, गणित पढेर डाक्टर, इन्जिनियर र IT विशेषज्ञ बन्नुहोस्।</p>
+        <div class="psubs"><span class="psub">Physics</span><span class="psub">Chemistry</span><span class="psub">Biology</span><span class="psub">Math</span><span class="psub">CS</span></div>
+        <div class="pcta en">Explore Science →</div><div class="pcta ne">विज्ञान हेर्नुहोस् →</div>
+      </div>
+      <div class="pc mg reveal d1">
+        <div class="pi">📊</div>
+        <div class="pt en">Management Group</div><div class="pt ne">व्यवस्थापन समूह</div>
+        <div class="pb en">Min. GPA 1.6 · Wide Options</div><div class="pb ne">न्यूनतम GPA १.६</div>
+        <p class="pd en">Build business acumen in Accountancy, Economics and Hotel Management. Careers in banking, entrepreneurship, and IT.</p>
+        <p class="pd ne">लेखा, अर्थशास्त्र, होटल व्यवस्थापन पढेर बैंकर, उद्यमी र IT म्यानेजर बन्नुहोस्।</p>
+        <div class="psubs"><span class="psub">Accountancy</span><span class="psub">Economics</span><span class="psub">Business</span><span class="psub">Hotel</span></div>
+        <div class="pcta en">Explore Management →</div><div class="pcta ne">व्यवस्थापन →</div>
+      </div>
+      <div class="pc lw reveal d2">
+        <div class="pi">⚖️</div>
+        <div class="pt en">Law & Humanities</div><div class="pt ne">कानून र मानविकी</div>
+        <div class="pb en">Min. GPA 1.6 · Fulfilling</div><div class="pb ne">न्यूनतम GPA १.६</div>
+        <p class="pd en">Pursue justice through Legal Studies, Journalism, and Sociology. Serve as a lawyer, journalist, or civil servant.</p>
+        <p class="pd ne">कानून, पत्रकारिता, समाजशास्त्र पढेर वकिल, पत्रकार र सरकारी अधिकारी बन्नुहोस्।</p>
+        <div class="psubs"><span class="psub">Legal Studies</span><span class="psub">Sociology</span><span class="psub">Journalism</span><span class="psub">Pol. Sci</span></div>
+        <div class="pcta en">Explore Law →</div><div class="pcta ne">कानून हेर्नुहोस् →</div>
+      </div>
+      <div class="pc ct reveal d3">
+        <div class="pi">🔧</div>
+        <div class="pt en">CTEVT Technical</div><div class="pt ne">CTEVT प्राविधिक</div>
+        <div class="pb en">SEE Pass · Fast Employment</div><div class="pb ne">SEE पास · छिटो रोजगारी</div>
+        <p class="pd en">18-month TSLC or 2–3 year diplomas. Skill-focused education with reserved scholarship seats for marginalized students.</p>
+        <p class="pd ne">१८ महिना TSLC वा २-३ वर्षको डिप्लोमा। सिपमूलक शिक्षा, आरक्षित सिट।</p>
+        <div class="psubs"><span class="psub">Civil Eng.</span><span class="psub">Computer</span><span class="psub">Nursing</span><span class="psub">Agriculture</span></div>
+        <div class="pcta en">Explore CTEVT →</div><div class="pcta ne">CTEVT हेर्नुहोस् →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="section hiw">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="sec-kicker reveal" style="justify-content:center"><span class="en">How It Works</span><span class="ne">कसरी काम गर्छ</span></div>
+      <h2 class="sec-h reveal" style="text-align:center">
+        <span class="en">From Confusion to <span>Clarity</span> in 4 Steps</span>
+        <span class="ne">४ चरणमा अलमलबाट <span>स्पष्टतामा</span></span>
+      </h2>
+    </div>
+    <div class="hiw-grid reveal">
+      <div class="hiw-step"><div class="hiw-n">01</div><div class="hiw-icon">📝</div><h3 class="en">Enter Your GPA</h3><h3 class="ne">GPA राख्नुहोस्</h3><p class="en">Slide or type your SEE GPA. We instantly show exactly which pathways you qualify for.</p><p class="ne">SEE GPA राख्नुहोस् र योग्य मार्गहरू तुरुन्त हेर्नुहोस्।</p><div class="hiw-arr">→</div></div>
+      <div class="hiw-step"><div class="hiw-n">02</div><div class="hiw-icon">🗺️</div><h3 class="en">Pick Your Province</h3><h3 class="ne">प्रदेश छान्नुहोस्</h3><p class="en">Filter colleges and scholarships by your province and district. See only what's near you.</p><p class="ne">आफ्नो प्रदेश र जिल्ला अनुसार फिल्टर गर्नुहोस्।</p><div class="hiw-arr">→</div></div>
+      <div class="hiw-step"><div class="hiw-n">03</div><div class="hiw-icon">🎯</div><h3 class="en">Choose a Career</h3><h3 class="ne">क्यारियर छान्नुहोस्</h3><p class="en">Tap any career icon to see the full roadmap of subjects, colleges, and how to get there.</p><p class="ne">क्यारियर आइकन थिच्नुहोस् र पूरा नक्सा हेर्नुहोस्।</p><div class="hiw-arr">→</div></div>
+      <div class="hiw-step"><div class="hiw-n">04</div><div class="hiw-icon">📥</div><h3 class="en">Download & Go</h3><h3 class="ne">डाउनलोड गरेर जानुहोस्</h3><p class="en">Save your one-page PDF guide. Read offline, share with family. Always free.</p><p class="ne">PDF गाइड सुरक्षित गर्नुहोस्। अफलाइन पढ्नुहोस् — सधैं निःशुल्क।</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SCHOLARSHIPS -->
+<section class="section sc-section" id="schol">
+  <div class="container">
+    <div class="ph">
+      <div>
+        <div class="sec-kicker reveal en">Scholarships</div>
+        <div class="sec-kicker reveal ne">छात्रवृत्ति</div>
+        <h2 class="sec-h reveal en">Don't Let <span>Money</span> Stop<br>Your Dreams</h2>
+        <h2 class="sec-h reveal ne"><span>पैसाले</span> तपाईंको सपना<br>रोक्न नदिनुहोस्</h2>
+      </div>
+      <a href="../step4-scholarships/index.html" class="btn-ghost reveal en" style="align-self:flex-end">View All Scholarships →</a>
+      <a href="../step4-scholarships/index.html" class="btn-ghost reveal ne" style="align-self:flex-end">सबै छात्रवृत्ति →</a>
+    </div>
+    <div class="sc-grid">
+      <div class="sc-card reveal">
+        <div class="sc-ico">🏛️</div>
+        <div class="sc-tag g en">Government</div><div class="sc-tag g ne">सरकारी</div>
+        <h4 class="en">10% Municipal Quota</h4><h4 class="ne">१०% नगरपालिका कोटा</h4>
+        <p class="en">For community school students. Municipalities announce windows 1–3 weeks after SEE results. Full or partial fee waiver for +2.</p>
+        <p class="ne">सरकारी विद्यालय उत्तीर्णहरूको लागि। SEE नतिजा पछि १-३ हप्तामा घोषणा। +2 को पूर्ण वा आंशिक शुल्क माफी।</p>
+        <div class="sc-lnk en">Learn how to apply →</div><div class="sc-lnk ne">कसरी आवेदन दिने →</div>
+      </div>
+      <div class="sc-card reveal d1">
+        <div class="sc-ico">🔧</div>
+        <div class="sc-tag t">CTEVT</div>
+        <h4 class="en">CTEVT Technical Seats</h4><h4 class="ne">CTEVT प्राविधिक सिट</h4>
+        <p class="en">Reserved scholarship seats for marginalized, Dalit, and meritorious students. Full tuition support for TSLC and diploma programs.</p>
+        <p class="ne">पिछडिएका, दलित र मेधावी विद्यार्थीहरूको लागि आरक्षित सिट। TSLC र डिप्लोमामा पूर्ण सहायता।</p>
+        <div class="sc-lnk en">Check CTEVT programs →</div><div class="sc-lnk ne">CTEVT कार्यक्रम →</div>
+      </div>
+      <div class="sc-card reveal d2">
+        <div class="sc-ico">🌐</div>
+        <div class="sc-tag i en">NGO / International</div><div class="sc-tag i ne">NGO / अन्तर्राष्ट्रिय</div>
+        <h4 class="en">NGO & Aid Scholarships</h4><h4 class="ne">NGO र सहायता</h4>
+        <p class="en">Nepal Youth Foundation and international programs provide targeted support for first-generation and disadvantaged students across Nepal.</p>
+        <p class="ne">नेपाल युथ फाउन्डेशन र अन्तर्राष्ट्रिय कार्यक्रमहरूले आर्थिक रूपमा कमजोर विद्यार्थीलाई सहायता गर्छन्।</p>
+        <div class="sc-lnk en">Explore NGO options →</div><div class="sc-lnk ne">NGO विकल्पहरू →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section class="section testi">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="sec-kicker reveal" style="justify-content:center"><span class="en">Student Stories</span><span class="ne">विद्यार्थी कथाहरू</span></div>
+      <h2 class="sec-h reveal" style="text-align:center">
+        <span class="en">Students Like You Are <span>Succeeding</span></span>
+        <span class="ne">तपाईंजस्तै विद्यार्थीहरू <span>सफल भइरहेका छन्</span></span>
+      </h2>
+    </div>
+    <div class="tg">
+      <div class="tc reveal"><div class="tq">"</div><p class="tt en">I scored 2.3 GPA and thought my options were very limited. Pathshala Guide showed me CTEVT Computer Engineering — now I'm in my second year with a scholarship.</p><p class="tt ne">मेरो GPA २.३ थियो। Pathshala Guide ले CTEVT Computer Engineering देखायो — अहिले म छात्रवृत्तिसहित दोस्रो वर्षमा छु।</p><div class="ta"><div class="tav">👦</div><div><div class="tn">Ramesh K.</div><div class="tl en">Butwal · Lumbini Province</div><div class="tl ne">बुटवल · लुम्बिनी प्रदेश</div></div></div></div>
+      <div class="tc reveal d1"><div class="tq">"</div><p class="tt en">Found the municipal scholarship through this site. Full fee waiver for +2 Science. I never would have known the deadline without Pathshala Guide.</p><p class="tt ne">यस साइटबाट नगरपालिका छात्रवृत्ति थाहा पाएँ। +2 विज्ञानको पूर्ण शुल्क माफी पाएँ।</p><div class="ta"><div class="tav">👧</div><div><div class="tn">Sita M.</div><div class="tl en">Biratnagar · Province No. 1</div><div class="tl ne">बिराटनगर · प्रदेश नं. १</div></div></div></div>
+      <div class="tc reveal d2"><div class="tq">"</div><p class="tt en">The Nepali language option made everything clear. My parents could understand my career options without any help — that changed everything.</p><p class="tt ne">नेपाली भाषाको विकल्पले सबै कुरा स्पष्ट बनायो। मेरा आमाबुबाले पनि मेरा विकल्पहरू बुझ्न सक्नुभयो।</p><div class="ta"><div class="tav">🧑</div><div><div class="tn">Aarav T.</div><div class="tl en">Pokhara · Gandaki Province</div><div class="tl ne">पोखरा · गण्डकी प्रदेश</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="cta-inner">
+    <div class="sec-kicker reveal" style="justify-content:center"><span class="en">Get Started — Free</span><span class="ne">सुरु गर्नुहोस् — निःशुल्क</span></div>
+    <h2 class="reveal">
+      <span class="en">Your Future Doesn't Wait.<br><span>Neither Should You.</span></span>
+      <span class="ne">तपाईंको भविष्य<br><span>पर्खिँदैन।</span></span>
+    </h2>
+    <p class="reveal en">Free, bilingual, built for government school students across Nepal. No login, no cost — just clarity.</p>
+    <p class="reveal ne">निःशुल्क, द्विभाषिक, नेपालका सरकारी विद्यालय विद्यार्थीहरूको लागि बनाइएको।</p>
+    <div class="cta-btns reveal">
+      <a href="../step2-pathways/index.html" class="btn-primary"><span>🎯</span><span class="en">Start Exploring</span><span class="ne">अन्वेषण सुरु</span></a>
+      <a href="#" class="btn-ghost"><span>📥</span><span class="en">Download Free Guide</span><span class="ne">निःशुल्क गाइड</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg">
+    <div>
+      <div class="logo"><div class="logo-mark">📚</div><div class="logo-name">Pathshala <em>Guide</em></div></div>
+      <p class="ft en">Free, bilingual career guidance for SEE graduates across Nepal. Bridging the information gap for government school students.</p>
+      <p class="ft ne">नेपालका SEE उत्तीर्णहरूको लागि निःशुल्क, द्विभाषिक क्यारियर मार्गदर्शन।</p>
+      <div class="fbadge">🇳🇵 Nepal · NEB & CTEVT Verified</div>
+    </div>
+    <div class="fc">
+      <h5 class="en">Pathways</h5><h5 class="ne">मार्गहरू</h5>
+      <a href="../step2-pathways/index.html"><span class="en">🔬 Science</span><span class="ne">🔬 विज्ञान</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">📊 Management</span><span class="ne">📊 व्यवस्थापन</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">⚖️ Law & Humanities</span><span class="ne">⚖️ कानून</span></a>
+      <a href="../step2-pathways/index.html"><span class="en">🔧 CTEVT</span><span class="ne">🔧 CTEVT</span></a>
+    </div>
+    <div class="fc">
+      <h5 class="en">Resources</h5><h5 class="ne">स्रोतहरू</h5>
+      <a href="../step4-scholarships/index.html"><span class="en">Scholarships</span><span class="ne">छात्रवृत्ति</span></a>
+      <a href="../step3-institutions/index.html"><span class="en">Institutions</span><span class="ne">संस्थाहरू</span></a>
+      <a href="#"><span class="en">Download Guides</span><span class="ne">गाइड डाउनलोड</span></a>
+      <a href="../step5-gpa-tool/index.html"><span class="en">Career Roadmap</span><span class="ne">क्यारियर नक्सा</span></a>
+    </div>
+    <div class="fc">
+      <h5>Official Sources</h5>
+      <a href="https://neb.ntc.net.np" target="_blank">✅ NEB Nepal</a>
+      <a href="https://www.ctevt.org.np" target="_blank">✅ CTEVT</a>
+      <a href="#"><span class="en">Municipality Portals</span><span class="ne">नगरपालिका</span></a>
+      <a href="#"><span class="en">About Pathshala</span><span class="ne">बारेमा</span></a>
+    </div>
+  </div>
+  <div class="fb">
+    <span class="en">© 2025 Pathshala Guide · Free for all students 🇳🇵</span>
+    <span class="ne">© २०२५ Pathshala Guide · सबैको लागि निःशुल्क 🇳🇵</span>
+    <span style="color:rgba(255,255,255,.25)">Verified from NEB & CTEVT official sources</span>
+  </div>
+</footer>
+  <!-- Shared JS -->
+  <script src="../shared/shared.js"></script>
+  <!-- Page JS -->
+  <script src="script.js"></script>
+</body>
+</html>
